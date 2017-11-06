@@ -51,3 +51,6 @@ collections:
   projects:
     output: true
     permalink: /projects/:path/
+    defaults:
+      about-title: "About the thang"
+      role-title: "My part"
