@@ -1,0 +1,28 @@
+---
+# main stylesheet, import partials
+---
+
+/*!
+ * Portfolio by Tessa Kruger
+ * Copyright 2017 Tessa Kruger - tessakruger.com
+ * Licensed under MIT
+*/
+
+/* Variables */
+@import "variables";
+
+/* Mixins and functions */
+@import "vendor/flexbox";
+
+/* Core CSS */
+@import "reset";
+
+
+/* Components */
+@import "header";
+
+/* Utility classes */
+
+
+/* Layout specific */
+
