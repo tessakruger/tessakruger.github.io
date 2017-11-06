@@ -1,0 +1,22 @@
+---
+layout: main
+title: portfolio
+---
+
+<!-- use layout: home if you want to list both posts and projects -->
+
+<main id="portfolio">
+	<h1 class="page-header">Dev Projects</h1>
+	<section>
+		<ul id="portfolio-gallery">
+			{% for project in site.projects %}
+				<li>
+					<a href="{{ site.baseurl }}{{ project.url }}">
+						<img src="{{ site.baseurl }}/{{ site.image_path }}/{{ project.image }}">
+						<h2>{{ project.title }}</h2>
+					</a>
+				</li>
+			{% endfor %}
+		</ul>
+	</section>
+</main>
