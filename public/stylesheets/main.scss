@@ -19,6 +19,7 @@
 
 
 /* Components */
+@import "nav";
 @import "header";
 
 /* Utility classes */
@@ -26,3 +27,188 @@
 
 /* Layout specific */
 
+
+
+.wrapper {
+	@include flexbox();
+	@include justify-content(flex-start);
+}
+
+.footer {
+	width: 100%;
+	display: block;
+}
+
+
+.wrapper--navbar {
+	padding: 25px 5px;
+	background: #333;
+	min-width: 100px;
+	color: aquamarine;
+	text-align: center;
+	margin: 0;
+	height: 100vh;
+}
+
+.wrapper--left-side {
+	@include flexbox();
+    background: aquamarine;
+    // margin-top: 80px;
+    margin-left: 100px;
+    height: 100vh;
+    width: calc(45% - 100px);
+}
+
+.wrapper--right-side {
+	@include flexbox();
+	@include flex-direction(column);
+	background: lightcoral;
+	margin: 80px 0 auto 45%;
+	padding: 0 50px;
+	width: 100%;
+}
+
+.wrapper--category {
+	background: none;
+	@include flexbox();
+	align-items: flex-end;
+	top: 0;
+	right: 0;
+	height: 100vh;
+	padding-bottom: 20px;
+	min-width: 100px;
+	z-index: -1;
+
+	.title {
+		transform: rotate(-90deg);
+		margin: 0 auto;
+		margin-left: -15px;
+		width: 1em;
+		white-space: nowrap;
+		font-size: 80pt;
+		color: #edf0f1;
+	}
+}
+
+.fixed {
+	position: fixed;
+}
+
+.current {
+	background: aquamarine;
+}
+
+.logo {
+	width: 200px;
+	margin: 10px;
+}
+
+.project-asset {
+	width: 100%;
+	height: 100%;
+	// background: #7f05d5;
+	padding: 15px;
+	display: flex;
+	align-items: center;
+
+	// .img-container {
+	// 	height: 70vh;
+	// 	overflow: auto;
+	// 	text-align: center;
+
+	// 	img {
+	// 		height: 100%;
+	// 	}
+	// }
+
+	.asset-details {
+		position: absolute;
+		bottom: 25px;
+		display: flex;
+		color: #fff;
+		font-size: small;
+		width: 100%;
+
+		div {
+			flex: 1;
+			align-self: flex-end;
+		}
+
+		.info {
+			display: flex;
+			flex-direction: column;
+
+			p {
+				margin: 0;
+
+				&.client {
+					font-weight: 600;
+				}
+			}
+		}
+		.link {
+			text-align: right;
+			margin-right: 30px;
+		}
+
+	}
+}
+
+.absolute {
+	position: absolute;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Josefin+Slab:100);
+
+.slider-wrap {
+  width: 100%;
+  height: 500px;
+  margin: 20px auto;
+  position: absolute;
+}
+.slider {
+  overflow-x: scroll;
+}
+.holder {
+  width: 300%;
+}
+.slide {
+  float: left;
+  width: 500px;
+  height: 500px;
+  position: relative;
+  background-position: 0 center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.temp {
+  position: absolute;
+  color: white;
+  font-size: 100px;
+  bottom: 15px;
+  left: 15px;
+  font-family: 'Josefin Slab', serif;
+  font-weight: 100;
+}
+
+.slider-nav {
+  text-align: center;
+  margin: 10px 0 0 0;
+}
+.slider-nav a {
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  background: #ddd;
+  overflow: hidden;
+  text-indent: -9999px;
+  border-radius: 50%;
+}
+.slider-nav a.active {
+  background: #999;
+}
+
+.slider-container {
+	position: relative;
+	width: 100%;
+}
