@@ -9,18 +9,22 @@
 			<div class="wrapper--navbar fixed">
 				{% include navigation.html %}
 			</div>
-
-			<div class="wrapper--left-side fixed">
-				{% if page.is_post %}
+			{% if page.is_post %}
+				<div class="wrapper--left-side fixed left-post">
 					{% include project-assets.html %}
-				{% else %}
+				</div>
+				<div class="wrapper--right-side right-post">
+					{{ content }}
+				</div>
+			{% else %}
+				<div class="wrapper--left-side fixed">
 					{% include left-side.html %}
-				{% endif %}
-			</div>
+				</div>
 
-			<div class="wrapper--right-side">
-				{{ content }}
-			</div>
+				<div class="wrapper--right-side">
+					{{ content }}
+				</div>
+			{% endif %}
 
 			<div class="wrapper--category fixed">
 				{% include category.html %}
