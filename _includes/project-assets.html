@@ -14,8 +14,20 @@
 			</div>
 		</div>
 	</div>
+	<div class="project-info">
+		{% for item in page.section %}
+		<div>
+			<p>{{ item.client }}</p>
+			<p>{{ item.tech }}</p>
+		</div>
+		<div>
+			<i class="fa fa-link"><a href="{{ item.link }}">Weblink</a></i>
+		</div>
+		{% endfor %}
+	</div>
 </div>
 
 <script src="../../../../public/js/slider.js"></script>
 <script src="../../../../public/js/resize-sensor.js"></script>
 <script src="../../../../public/js/element-queries.js"></script>
+<script src="../../../../public/js/mousewheel.js"></script>
