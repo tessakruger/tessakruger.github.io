@@ -7,9 +7,11 @@
   url: /projects/
   sublinks:
     - title: Code
-      url: /projects/code
+      url: /projects/#code
+      category: code
     - title: Design
-      url: /projects/design
+      url: /projects/#design
+      category: design
 
 - title: Tech
   url: /tech/

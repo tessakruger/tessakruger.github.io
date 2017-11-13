@@ -20,7 +20,7 @@
     <div{{ current }}>
         <a href="{{ site.baseurl }}{{ entry.url }}">{{ entry.title }}</a>
             {% for sublink in sublinks %}
-            <div><a href="{{ site.baseurl }}{{ sublink.url }}">{{ sublink.title }}</a></div>
+            <div data-filter=".{{ sublink.category }}"><a href="{{ site.baseurl }}{{ sublink.url }}">{{ sublink.title }}</a></div>
             {% endfor %}
     </div>
     {% else %}
@@ -29,3 +29,20 @@
     </div>
     {% endif %}
 {% endfor %}
+
+<script>
+    var initialFilter = 'all';
+    var hash = window.location.hash.replace(/^#/g, '');
+
+    if (hash) {
+        initialFilter = "." + hash;
+    }
+
+    var mixer = mixitup('.container', {
+        load: {
+            filter: initialFilter
+        }
+    });
+
+
+</script>
