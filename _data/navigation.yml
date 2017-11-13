@@ -1,0 +1,22 @@
+# Belongs at: /_data/navigation.yml
+---
+- title: Home
+  url: /
+  
+- title: Projects
+  url: /projects/
+  sublinks:
+    - title: Code
+      url: /projects/code
+    - title: Design
+      url: /projects/design
+
+- title: Tech
+  url: /tech/
+
+- title: About
+  url: /about/
+
+- title: Contact
+  url: /contact/
+---
