@@ -30,19 +30,6 @@
     {% endif %}
 {% endfor %}
 
-<script>
-    var initialFilter = 'all';
-    var hash = window.location.hash.replace(/^#/g, '');
+<script src="../public/js/mixitup.min.js"></script>
+<script src="../public/js/mixitup.js"></script>
 
-    if (hash) {
-        initialFilter = "." + hash;
-    }
-
-    var mixer = mixitup('.container', {
-        load: {
-            filter: initialFilter
-        }
-    });
-
-
-</script>
