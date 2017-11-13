@@ -1,0 +1,33 @@
+<div class="slider-container">
+	<div class="slider-wrap">
+		<nav class="slider-nav">
+			{% for item in page.images-array %}
+		  		<a href="#slide-{{ item.id }}" class="active">Slide {{ item.id }}</a> 
+		  	{% endfor %}
+		</nav>
+		<div class="slider" id="slider">
+			<div class="holder">
+			  {% for item in page.images-array %}
+					<div class="slide" id="slide-{{ item.id }}" style="background-image: url({{ site.url }}/{{ site.image_path }}{{ item.image }})">
+					</div>
+			  {% endfor %}
+			</div>
+		</div>
+	</div>
+	<div class="project-info">
+		{% for item in page.section %}
+		<div>
+			<p>{{ item.client }}</p>
+			<p>{{ item.tech }}</p>
+		</div>
+		<div>
+			<i class="fa fa-link"><a href="{{ item.link }}">Weblink</a></i>
+		</div>
+		{% endfor %}
+	</div>
+</div>
+
+<script src="../../../../public/js/slider.js"></script>
+<script src="../../../../public/js/resize-sensor.js"></script>
+<script src="../../../../public/js/element-queries.js"></script>
+<script src="../../../../public/js/mousewheel.js"></script>

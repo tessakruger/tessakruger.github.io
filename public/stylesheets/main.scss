@@ -19,10 +19,22 @@
 
 
 /* Components */
+@import "nav";
 @import "header";
+@import "project-page";
 
 /* Utility classes */
 
 
 /* Layout specific */
+@import "default-layout";
 
+html {
+    overflow: -moz-scrollbars-vertical; 
+    overflow-y: scroll;
+}
+
+.logo {
+	width: 200px;
+	margin: 10px;
+}

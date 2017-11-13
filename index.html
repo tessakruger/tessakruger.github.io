@@ -1,11 +1,20 @@
 ---
-layout: main
+layout: default
 title: portfolio
+sidebar: home;
+section:
+  logo: tessa kruger
+  bio: Here's a little info about moi
+  img: here is an illustration of me
 ---
+<a href="{{ site.url }}/projects/#code"><button id="show-code">Code</button></a>
+<a href="{{ site.url }}/projects/#design"><button id="show-design">Design</button></a>
+
+<!-- The Home page will be similar to the landing page, with a code and design button to take the user to the appropriate pages. Maybe it'll have some fun animations too. Maybe. -->
 
 <!-- use layout: home if you want to list both posts and projects -->
 
-<main id="portfolio">
+<!-- <main id="portfolio">
 	<h1 class="page-header">Dev Projects</h1>
 	<section>
 		<ul id="portfolio-gallery">
@@ -19,4 +28,4 @@ title: portfolio
 			{% endfor %}
 		</ul>
 	</section>
-</main>
+</main> -->

@@ -2,6 +2,11 @@
 layout: page
 title: About
 permalink: /about/
+sidebar: about;
+section:
+  logo: hi there!
+  bio: Get to know a bit more about me
+  img: here is an illustration of me
 ---
 
 This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+
+	<body>
+
+		<div class="wrapper">
+		
+			<div class="wrapper--navbar fixed">
+				{% include navigation.html %}
+			</div>
+			{% if page.is_post %}
+				<div class="wrapper--left-side fixed left-post">
+					{% include project-assets.html %}
+				</div>
+				<div class="wrapper--right-side right-post">
+					{{ content }}
+				</div>
+			{% else %}
+				<div class="wrapper--left-side fixed">
+					{% include left-side.html %}
+				</div>
+
+				<div class="wrapper--right-side">
+					{{ content }}
+				</div>
+			{% endif %}
+
+			<div class="wrapper--category fixed">
+				{% include category.html %}
+			</div>
+
+		</div>
+
+	</body>
+</html>

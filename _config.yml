@@ -20,6 +20,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  tessakruger
+linkedin_username: tessakruger
 
 # Build settings
 markdown: kramdown
@@ -47,7 +48,18 @@ sass:
 image_path:  public/images
 
 # Collection definitions and settings
-collections:
-  projects:
-    output: true
-    permalink: /projects/:path/
+collections: 
+  # projects:
+  #   output: true
+  #   permalink: /projects/:path/
+  #   defaults:
+  #     about-title: "About the thang"
+  #     role-title: "My part"
+
+defaults:
+  -
+    scope:
+      path: ""      # empty string for all files
+      type: posts   # limit to posts
+    values:
+      is_post: true # automatically set is_post=true for all posts
