@@ -14,12 +14,12 @@ section:
 	<button type="button" class="control" data-filter="all">All</button>
 </div>
 <div class="container">
-{% for post in site.posts %}
-	  <div class="mix {{ post.categories }} project-item">
-	     <img src="{{ site.url }}/{{ site.image_path }}{{ post.img_ext }}" class="logo">
-	      <a href="{{ post.url }}">{{ post.title }}</a>
-	  </div>
-{% endfor %}
+	{% for post in site.posts %}
+		<div class="mix {{ post.categories }} project-item">
+		 	<img src="{{ site.url }}/{{ site.image_path }}{{ post.img_ext }}" class="logo">
+		  	<a href="{{ post.url }}">{{ post.title }}</a>
+		</div>
+	{% endfor %}
 </div>
 
 <script src="/public/js/mixitup.min.js"></script>
