@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+
+	<body>
+
+		<div class="wrapper">
+		
+			<div class="wrapper--navbar fixed">
+				{% include navigation.html %}
+			</div>
+
+			<div class="wrapper--left-side fixed">
+				{% if page.is_post %}
+					{% include project-assets.html %}
+				{% else %}
+					{% include left-side.html %}
+				{% endif %}
+			</div>
+
+			<div class="wrapper--right-side">
+				{{ content }}
+			</div>
+
+			<div class="wrapper--category fixed">
+				{% include category.html %}
+			</div>
+
+		</div>
+
+	</body>
+</html>
