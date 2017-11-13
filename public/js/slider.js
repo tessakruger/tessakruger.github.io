@@ -8,20 +8,23 @@ $(document).ready (function(){
 	    slider: $("#slider"),
 	    allSlides: $(".slide"),
 	    sliderNav: $(".slider-nav"),
-	    allNavButtons: $(".slider-nav > a")
+	    allNavButtons: $(".slider-nav > a"),
+	    slideWidth: $('.slider-container').width(),
 	  },
 
 	  timing: 800,
-	  slideWidth: 373, // could measure this
-	 
+	  // slideWidth: // could measure this
 	  // In this simple example, might just move the
 	  // binding here to the init function
 	  init: function() {
 	    this.bindUIEvents();
-	    var setWidth = $('.slider-container').width();
-		console.log("This is setWidth " + setWidth);
-		$('.slide').css({"width": setWidth + "px"});
-		$('.slider-wrap').css({"width": setWidth + "px"});
+	    $('.slide').css({"width": this.el.slideWidth + "px"});
+		$('.slider-wrap').css({"width": this.el.slideWidth + "px"});
+	    this.setSlideWidths();
+	  },
+
+	  setSlideWidths: function() {
+	  	this.el.slideWidth = $('.slider-container').width();
 	  },
 	  
 	  bindUIEvents: function() {
@@ -42,7 +45,7 @@ $(document).ready (function(){
 	  moveSlidePosition: function(event) {
 	    // Magic Numbers =(
 	    this.el.allSlides.css({
-	      // "background-position": $(event.target).scrollLeft()/6-50+ "px center",
+	      // "background-position": $(event.target).scrollLeft()/6-100+ "px center",
 	      "background-position": " center center"
 	    });
 	  },
@@ -51,10 +54,10 @@ $(document).ready (function(){
 	    event.preventDefault();
 	    var position = $(el).attr("href").split("-").pop();
 	    this.el.slider.animate({
-	      scrollLeft: position * this.slideWidth
+	      scrollLeft: position * this.el.slideWidth
 	    }, this.timing);
 
-	    console.log(this.slideWidth);
+	    console.log(this.el.slideWidth);
 	    this.changeActiveNav(el);
 	  },
 	  
@@ -66,5 +69,11 @@ $(document).ready (function(){
 	};
 
 	slider.init();
-});
 
+	new ResizeSensor($('.slider-container'), function() {
+	    var slideWidth = $('.slider-container').width();
+	    $('.slide').css({"width": slideWidth + "px"});
+		$('.slider-wrap').css({"width": slideWidth + "px"});
+		slider.setSlideWidths();
+	});
+});
