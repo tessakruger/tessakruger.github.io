@@ -1,18 +1,18 @@
 <div class="slider-container">
 	<div class="slider-wrap">
-	  <div class="slider" id="slider">
-	    <div class="holder">
-	      {% for item in page.images-array %}
-				<div class="slide" id="slide-{{ item.id }}" style="background-image: url({{ site.url }}/{{ site.image_path }}{{ item.image }})">
-				</div>
-	      {% endfor %}
-	    </div>
-	  </div>
-	  <nav class="slider-nav">
-	    <a href="#slide-0" class="active">Slide 0</a> 
-	    <a href="#slide-1">Slide 1</a> 
-	    <a href="#slide-2">Slide 2</a> 
-	  </nav>
+		<nav class="slider-nav">
+			{% for item in page.images-array %}
+		  		<a href="#slide-{{ item.id }}" class="active">Slide {{ item.id }}</a> 
+		  	{% endfor %}
+		</nav>
+		<div class="slider" id="slider">
+			<div class="holder">
+			  {% for item in page.images-array %}
+					<div class="slide" id="slide-{{ item.id }}" style="background-image: url({{ site.url }}/{{ site.image_path }}{{ item.image }})">
+					</div>
+			  {% endfor %}
+			</div>
+		</div>
 	</div>
 </div>
 
