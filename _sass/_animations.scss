@@ -1,7 +1,7 @@
 .tk-logo {
 	display: flex;
 	flex-direction: column;;
-	margin: 100px auto 0;
+	padding-top: 100px;
 	align-items: center;
 
 	.kruger {
@@ -67,4 +67,23 @@
 			color: #fff;
 		}
 	}
+}
+
+.left-brain,
+.right-brain {
+	height: 100vh;
+	position: absolute;
+	width: 50vw;
+	z-index: -1;
+	display: none;
+}
+
+.left-brain {
+	background: lightcoral;
+	left: 0;
+}
+
+.right-brain {
+	background: cornflowerblue;
+	right: 0
 }

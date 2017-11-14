@@ -7,6 +7,10 @@ section:
   bio: Here's a little info about moi
   img: here is an illustration of me
 ---
+<div class="left-brain" id="design-side">
+</div>
+<div class="right-brain" id="code-side">
+</div>
 <div class="tk-logo">
 	<div class="tessa">
 		{% include tessa-logo.html %}
@@ -33,6 +37,19 @@ section:
 			$('#cursor').hide();
 			$('.hidden-load').addClass('animated');
 		}, 3600);
+
+		$('#show-design').on('mouseover', function() {
+			$('#design-side').fadeIn('slow');
+		})
+		$('#show-design').on('mouseout', function() {
+			$('#design-side').fadeOut('slow');
+		})
+		$('#show-code').on('mouseover', function() {
+			$('#code-side').fadeIn('slow');
+		})
+		$('#show-code').on('mouseout', function() {
+			$('#code-side').fadeOut('slow');
+		})
 
 	});
 </script>
