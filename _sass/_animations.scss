@@ -1,0 +1,44 @@
+.tk-logo {
+	display: flex;
+	flex-direction: column;
+	width: 400px;
+	position: absolute;
+	top: 10%;
+	left: 50%;
+	margin-left: -200px;
+
+	.kruger {
+		margin-top: -38px;
+		margin-left: 90px;
+
+		.hidden-load {
+			visibility: hidden;
+
+			&.animated {visibility: visible;}
+		}
+	}
+}
+
+.var-highlight{
+	color: #C0AD60;
+}
+.string-highlight{
+	color: rgba(253, 149, 90, 0.8);
+}
+
+#typewriter{
+		font-size: 5.5em;
+		margin: 0;
+		font-family: "Courier New";
+
+		&:after{
+			content: "_";
+			animation: blink 600ms linear infinite alternate;
+		}
+}
+
+@include keyframes(blink) {
+	0%{opacity: 0;}
+	100%{opacity: 1;}
+}
+
