@@ -12,13 +12,13 @@ section:
 		{% include tessa-logo.html %}
 	</div>
 	<div class="kruger">
-		<!-- <pre id="typewriter" class="cursor"></pre> -->
+		<pre id="cursor"></pre>
 		<pre id="typewriter" class="hidden-load">kruger </pre>
 	</div>
 </div>
-<div>
-	<a href="{{ site.url }}/projects/#code"><button id="show-code">Code</button></a>
+<div class="choose">
 	<a href="{{ site.url }}/projects/#design"><button id="show-design">Design</button></a>
+	<a href="{{ site.url }}/projects/#code"><button id="show-code">Code</button></a>
 </div>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -30,8 +30,8 @@ section:
 	$(document).ready(function(){
 		setTimeout(function(){
 			console.log('loading...');
+			$('#cursor').hide();
 			$('.hidden-load').addClass('animated');
-			$('.cursor').addClass('hidden-load');
 		}, 3600);
 
 	});
