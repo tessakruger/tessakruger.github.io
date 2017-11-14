@@ -13,18 +13,18 @@
 
 /* Mixins and functions */
 @import "vendor/flexbox";
+@import "vendor/keyframes";
 
 /* Core CSS */
 @import "reset";
-
 
 /* Components */
 @import "nav";
 @import "header";
 @import "project-page";
 
-/* Utility classes */
-
+/* Animations */
+@import "animations";
 
 /* Layout specific */
 @import "default-layout";
