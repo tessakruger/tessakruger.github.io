@@ -16,7 +16,6 @@ section:
 		{% include tessa-logo.html %}
 	</div>
 	<div class="kruger">
-		<pre id="cursor"></pre>
 		<pre id="typewriter" class="hidden-load">kruger </pre>
 	</div>
 </div>
@@ -28,16 +27,9 @@ section:
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
   <script src="//s3-us-west-2.amazonaws.com/s.cdpn.io/16327/DrawSVGPlugin.js?r=11"></script>
-<script src="/public/js/tessa.js"></script>
 <script src="/public/js/typewriter.js"></script>
 <script>
 	$(document).ready(function(){
-		setTimeout(function(){
-			console.log('loading...');
-			$('#cursor').hide();
-			$('.hidden-load').addClass('animated');
-		}, 3600);
-
 		$('#show-design').on('mouseover', function() {
 			$('#design-side').fadeIn('slow');
 		})
@@ -50,6 +42,5 @@ section:
 		$('#show-code').on('mouseout', function() {
 			$('#code-side').fadeOut('slow');
 		})
-
 	});
 </script>
