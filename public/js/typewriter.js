@@ -19,7 +19,7 @@ startCursive = function(callback){
         TweenLite.to(paths.eq(8), 0.3, {strokeDashoffset: 0, delay: 2.9, ease: Linear.easeOut}),
     ]);
 
-    setTimeout(callback, 3000);
+    setTimeout(callback, 3100);
 }
 
 function setupTypewriter(t) {
