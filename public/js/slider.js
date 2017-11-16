@@ -70,6 +70,9 @@ $(document).ready (function(){
 
 	slider.init();
 
+	$('.slider-nav a').removeClass('active');
+	$('.slider-nav a:first-child').addClass('active');
+
 	new ResizeSensor($('.slider-container'), function() {
 	    var slideWidth = $('.slider-container').width();
 	    $('.slide').css({"width": slideWidth + "px"});
