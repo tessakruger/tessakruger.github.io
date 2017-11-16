@@ -3,22 +3,36 @@
 	@include justify-content(flex-start);
 
 	.wrapper--navbar {
-		padding: 25px 5px;
-		background: #333;
+		padding: 25px 0;
+		background: #fff;
 		min-width: 100px;
 		color: aquamarine;
 		text-align: center;
 		margin: 0;
-		height: 100vh;
+		height: 100%;
+
+		div {
+			padding: 15px 0;
+			width: 100%;
+		}
+
+		div#nav * {
+			transition: all 200ms ease-in-out;
+			
+			&:hover {
+				background: $light-blue;
+			}
+		}
 	}
 
 	.wrapper--left-side {
 		@include flexbox();
-	    background: aquamarine;
+	    background: $light-blue;
 	    // margin-top: 80px;
 	    margin-left: 100px;
-	    height: 100vh;
+	    height: 100%;
 	    width: calc(45% - 100px);
+	    padding: 90px 25px 0;
 
 	    &.left-post {
 	    	width: calc(60% - 100px);
@@ -28,10 +42,9 @@
 	.wrapper--right-side {
 		@include flexbox();
 		@include flex-direction(column);
-		background: lightcoral;
+		background: none;
 		margin: 80px 0 auto 45%;
-		padding: 0 50px;
-		width: 100%;
+		padding: 0 50px 250px;
 
 		&.right-post {
 			margin: 80px 0 auto 60%;
@@ -67,4 +80,25 @@
 
 .absolute {
 	position: absolute;
+}
+
+.projects {
+	display: flex;
+	flex-direction: column;
+
+	.project-item {
+		display: flex;
+		margin-top: 25px;
+
+		.info {
+			display: flex;
+			flex-direction: column;
+			padding-top: 5px;
+			flex: 1;
+
+			* {
+				margin: 5px;
+			}
+		}
+	}
 }
