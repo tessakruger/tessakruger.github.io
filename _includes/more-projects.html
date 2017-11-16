@@ -1,0 +1,42 @@
+<div class="more-projects">
+	<h3>Wow! Time really does fly when you're having fun</h3>
+	<p>I'm afraid that's the long and short of this project, but I've prepared a few more so there's no need to panic... yet.</p>
+
+	<div>
+	{% for post in site.posts limit:6 %}
+	  {% if post.url != page.url %} 
+	    {% if forloop.index < 6 or found %}
+	    <a href="{{ post.url }}">
+	    	<div class="cardWrapper">
+		      <div class="card">
+		        <div class="cardFace front">
+		        	<h3>
+			        	<li>
+			        		{{ post.title }}
+			      		</li>
+			      	</h3>
+			      	{% if post.categories contains "code" %}
+			      		<i class="fa fa-code" aria-hidden"true"></i>
+			      	{% else %}
+			      		<i class="fa fa-pencil" aria-hidden"true"></i>
+			      	{% endif %}
+			     </div>
+		        <div class="cardFace back">
+		        	<i class="fa fa-play fa-3x"></i>
+		        </div>
+		      </div>
+		    </div>
+		</a>
+	    {% endif %}
+	  {% else %}
+	    {% assign found = true %}
+	  {% endif %}
+	{% endfor %}
+	</div>
+</div>
+	<div class="navigate">
+		<a href="{{ site.baseurl }}/projects"><i class="fa fa-undo" aria-hidden="true"></i> Ahhh CTRL/CMD+Z me outta here!</a>
+	</div>
+
+
+<script src="../public/js/flip-card.js"></script>
