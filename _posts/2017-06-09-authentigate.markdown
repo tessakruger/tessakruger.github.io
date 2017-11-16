@@ -1,17 +1,17 @@
 ---
 layout: post
-title:  "CAFE"
+title:  "AuthentiGATE"
 month: February 2014 - June 2017
 categories: design
 img_ext: /projects/logo01.jpg
 sidebar: design;
-permalink: /projects/cafe
+permalink: /projects/authentigate
 section:
- - client: CAFE
+ - client: AuthentiGATE
    tech: Adobe Illustrator, Photoshop
-   link: http://cafe.ca
-   bg: "background: #ee2d24"
-   width: 300%
+   link: http://authentigate.ca
+   bg: "background: #fa8f1c"
+   width: 400%
 images-array:
  - image: /projects/mockup.png
    alt: bmmp home page
@@ -22,4 +22,11 @@ images-array:
  - image: /projects/mockup.png
    alt: last img
    id: 2
+ - image: /projects/mockup.png
+   alt: last img
+   id: 3 
 ---
+
+[Get in touch][contact]
+
+[contact]: http://google.ca
