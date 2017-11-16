@@ -29,12 +29,197 @@
 /* Layout specific */
 @import "default-layout";
 
+/* Fonts */
+@import url('https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,700');
+@import url('https://fonts.googleapis.com/css?family=Raleway:800');
+
+@font-face {
+	font-family: "Museo Sans";
+	src: url('../fonts/MuseoSansCyrl_100.otf') format('opentype');
+}
+
+@font-face {
+	font-family: "Museo Sans Bold";
+	src: url('../fonts/MuseoSansCyrl_500.otf') format('opentype');
+}
+
+@font-face {
+	font-family: "Museo Sans Extra-Bold";
+	src: url('../fonts/MuseoSansCyrl_900.otf') format('opentype');
+}
+
+@font-face {
+	font-family: "Pluto Sans";
+	src: url('../fonts/pluto-sans.ttf');
+}
+
+@font-face {
+	font-family: "Pluto Sans Bold";
+	src: url('../fonts/pluto-sans-bold.ttf');
+}
+
+@font-face {
+	font-family: "King Basil";
+	src: url('../fonts/King-Basil-Lite.ttf');
+}
+
 html {
     overflow: -moz-scrollbars-vertical; 
     overflow-y: scroll;
 }
 
+body {
+	font-family: $museo;
+	color: $dark-gray;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $raleway;
+}
+
+h1 {
+	font-size: $type-size-1;
+	text-transform: uppercase;
+	letter-spacing: -0.75px;
+	font-weight: 700;
+}
+
+h2 {
+	font-size: $type-size-2;
+	text-transform: uppercase;
+}
+
+h3 {
+	font-size: $type-size-3;
+}
+
+h4 {
+	font-size: $type-size-4;
+	text-transform: uppercase;
+}
+
+h5 {
+	font-family: $museo-bold;
+	font-size: 14px;
+	color: $yellow;
+	text-transform: uppercase;
+	letter-spacing: -0.5px;
+}
+
+h6 {
+	font-family: $museo-bold;
+}
+
+p {
+	font-size: $type-size-5;
+}
+
+a {	
+	font-family: $museo-bold;
+	color: $dark-blue;
+	text-decoration: none;
+	font-weight: 900;
+	text-transform: uppercase;
+	margin: 5px 0;
+	transition: all 250ms ease-in-out;
+}
+
+a:hover,
+a:focus {
+	color: $yellow;
+}
+
+button {
+	background: $light-blue;
+	border: none;
+	border-radius: 8px;
+	border-bottom: 4px solid #a9b2b7;
+	color: $dark-blue;
+	padding: 12px 35px;
+	text-transform: uppercase;
+	transition: background 250ms ease-in-out;
+
+	&:hover {
+		background: #c0c9ce;
+	}
+
+	&:focus {
+		background: #c0c9ce;
+		border-bottom: 4px solid #c0c9ce;
+	}
+}
+
+li {
+	list-style: none;
+}
+
 .logo {
 	width: 200px;
 	margin: 10px;
+}
+
+.icon-dark {
+	color: $dark-blue;
+}
+
+.icon-light {
+	color: #fff;
+}
+
+.cardWrapper{
+  width:200px;
+  height:200px;
+  position:relative;
+  float:left;
+  margin:5px;
+  cursor:pointer;
+  -webkit-font-smoothing:antialiased;
+
+  .cardFace{
+    position:absolute;
+    width:200px;
+    height:200px;
+    overflow:hidden;
+    border-right:solid 6px #a9b2b7;
+    padding: 10px;
+    border-radius: 8px;
+
+    &.front{
+      background-color:$light-blue;
+
+      i {
+      	position: absolute;
+      	bottom: 12px;
+      	right: 12px;
+      }
+    }
+
+    &.back{
+      background-color:$dark-blue;
+      color: white;
+      border-right: solid 6px $dark-blue;
+      border-left: solid 6px #111b21;
+
+      i {
+      	margin: 0;
+      	position: absolute;
+      	top: 50%;
+      	left: 50%;
+      	transform: translate(-50%, -50%);
+      }
+    }
+  }
+}
+
+.more-projects,
+.navigate {
+	margin-top: 100px;
+	clear: right;
 }
