@@ -7,14 +7,21 @@
 		<div class="wrapper">
 		
 			<div class="wrapper--navbar fixed">
-				{% include navigation.html %}
+				<div id="hoverdown"><i class="fa fa-bars fa-2x icon-dark" aria-hidden="true"></i>
+					<div id="nav">
+						{% include navigation.html %}
+					</div>
+				</div>
 			</div>
 			{% if page.is_post %}
-				<div class="wrapper--left-side fixed left-post">
+			{% for item in page.section %}
+				<div class="wrapper--left-side fixed left-post" style="{{ item.bg }}">
 					{% include project-assets.html %}
 				</div>
+			{% endfor %}
 				<div class="wrapper--right-side right-post">
 					{{ content }}
+					{% include more-projects.html %}
 				</div>
 			{% else %}
 				<div class="wrapper--left-side fixed">
