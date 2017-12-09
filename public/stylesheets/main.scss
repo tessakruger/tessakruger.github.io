@@ -22,9 +22,13 @@
 @import "nav";
 @import "header";
 @import "project-page";
+@import "splash-page";
 
 /* Animations */
 @import "animations";
+@import "morph/demo.css";
+@import "morph/normalize.css";
+@import "morph/pater.css";
 
 /* Layout specific */
 @import "default-layout";
@@ -171,6 +175,16 @@ li {
 
 .icon-light {
 	color: #fff;
+
+	i, a {
+		opacity: 0.75;
+		transition: opacity 250ms ease-in-out;
+
+		&:hover {
+			opacity: 1;
+			color: #fff;
+		}
+	}
 }
 
 .cardWrapper{
@@ -193,6 +207,11 @@ li {
 
     &.front{
       background-color:$light-blue;
+
+      h3 {
+      	font-size: 2.2vw;
+      	word-wrap: break-word;
+      }
 
       i {
       	position: absolute;
