@@ -1,7 +1,7 @@
 # Belongs at: /_data/navigation.yml
 ---
 - title: Home
-  url: /projects/
+  url: /
   
 - title: Projects
   url: /projects/
