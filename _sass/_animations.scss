@@ -36,6 +36,10 @@
 	}
 }
 
+#intro--overlay {
+	display: none;
+}
+
 @include keyframes(blink) {
 	0%{opacity: 0;}
 	100%{opacity: 1;}
