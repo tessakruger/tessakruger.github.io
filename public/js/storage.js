@@ -8,7 +8,7 @@ $(document).ready(function (){
 	}
 
 	//clear localStorage on tab close
-	window.onbeforeunload = function() {
-	    localStorage.removeItem("visited");
-	};
+	// window.onbeforeunload = function() {
+	//     localStorage.removeItem("visited");
+	// };
 })
