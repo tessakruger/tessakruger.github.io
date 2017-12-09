@@ -4,46 +4,43 @@
 
 	.slider-wrap {
 	  width: 100%;
-	  height: 500px;
+	  height: 60vh;
 	  margin: 20px auto;
 	  position: absolute;
 	  overflow: hidden;
 
 	  .slider-nav {
 	    text-align: center;
-	    margin: 10px 0 0 0;
+	    margin: 10px 0 25px 0;
 
 	    a {
-	      width: 10px;
-	      height: 10px;
+	      width: 12px;
+	      height: 12px;
 	      display: inline-block;
-	      background: #ddd;
+	      background: rgba(255, 255, 255, 0.5);
 	      overflow: hidden;
 	      text-indent: -9999px;
 	      border-radius: 50%;
+	      margin: 5px;
 	    }
 
 	    a.active {
-	      background: #999;
+	      background: #fff;
 	    }
 	  }
 
 	  .slider {
-	    overflow-x: scroll;
-
-	    .holder {
-	      width: 300%;
+	    overflow-x: hidden;
 
 	      .slide {
 	        float: left;
 	        width: 500px;
-	        height: 500px;
+	        height: 53vh;
 	        position: relative;
-	        background-position: 0 center;
+	        background-position: center center;
 	        background-size: contain;
 	        background-repeat: no-repeat;
 	      }
-	    }
 	  }
 	}
 
@@ -52,16 +49,23 @@
 		bottom: 25px;
 		display: flex;
 		justify-content: space-between;
-		width: calc(100% - 30px - 1px);
-		// margin: 0 15px;
+		width: calc(100% - 10px - 1px);
 		align-items: flex-end;
 
 		p {
 			margin: 0 15px;
 
 			&:nth-child(1) {
-				font-weight: 600;
+				font-family: $museo-bold;
 			}
 		}
 	}
+}
+
+p.post-meta {
+	display: none;
+}
+
+.post-date {
+	margin-top: -35px;
 }

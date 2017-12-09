@@ -6,22 +6,24 @@
 		  	{% endfor %}
 		</nav>
 		<div class="slider" id="slider">
-			<div class="holder">
-			  {% for item in page.images-array %}
-					<div class="slide" id="slide-{{ item.id }}" style="background-image: url({{ site.url }}/{{ site.image_path }}{{ item.image }})">
-					</div>
-			  {% endfor %}
+			{% for holder in page.section %}
+			<div class="holder" style="width: {{ holder.width }}">
+			{% endfor%}
+			{% for item in page.images-array %}
+				<div class="slide" id="slide-{{ item.id }}" style="background-image: url({{ site.url }}/{{ site.image_path }}{{ item.image }})">
+				</div>
+			 {% endfor %}
 			</div>
 		</div>
 	</div>
-	<div class="project-info">
+	<div class="project-info icon-light">
 		{% for item in page.section %}
 		<div>
 			<p>{{ item.client }}</p>
 			<p>{{ item.tech }}</p>
 		</div>
 		<div>
-			<i class="fa fa-link"><a href="{{ item.link }}">Weblink</a></i>
+			<a href="{{ item.link }}" class="icon-light"><i class="fa fa-link fa-2x aria-hidden="true"></i></a>
 		</div>
 		{% endfor %}
 	</div>

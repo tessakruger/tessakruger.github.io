@@ -1,28 +1,50 @@
 ---
 layout: post
-title:  "Papillon Mer - Code Project 1"
+title:  "Papillon Mer"
+month: November 2017
 categories: code
 img_ext: /projects/logo-papillonmer.png
-sidebar: coding projects;
+sidebar: code;
 permalink: /projects/papillon-mer
 section:
- - client: Black Market Meal Prep
-   tech: HTML5, CSS3, Wordpress, PHP, WooCommerce, jQuery
+ - client: Papillon Mer
+   tech: Shopify, Liquid, HTML5, CSS3, jQuery, AJAX
    link: http://shop.papillonmer.com
-   bg: "background: #7f05d5"
+   bg: "background: #c4006a"
+   desc: A nomadic Australian living in Canada dreams of launching two online stores
+   width: 800%
 images-array:
- - image: /projects/mockup.png
-   alt: bmmp home page
+ - image: /projects/pm-m-home.png
+   alt: Papillon Mer Home Page
    id: 0
- - image: /projects/mockup2.png
-   alt: bmmp home on mobile
+ - image: /projects/pm-lt-home.png
+   alt: Footer and Featured Sections
    id: 1
- - image: /projects/mockup.png
-   alt: last img
+ - image: /projects/pm-lt-products.png
+   alt: List of Products
    id: 2
+ - image: /projects/pm-lt-product.png
+   alt: Product
+   id: 3
+ - image: /projects/pm-ph-product.png
+   alt: Product on Mobile
+   id: 4
+ - image: /projects/pm-ph-cart.png
+   alt: Cart Page on Mobile
+   id: 5
+ - image: /projects/pm-lt-checkout.png
+   alt: Checkout Page
+   id: 6
+ - image: /projects/pm-lt-main.png
+   alt: Treasure Trove Section
+   id: 7
 ---
+<h5 class="post-date">{{ page.month }}</h5>
+{% for title in site.defaults %}
+	<h3>{{ title.about }}</h3>
+	This is some info about papillon mer.
+	This is otherwise known as the output for { { content } }, which is only in the right side of the layout. Right now, you need to figure out how to generate content on the left side, specific to the project...
+	<h3>{{ title.role }}</h3>
+	And then also add the 'related projects' at the bottom of EVERY post!
+{% endfor %}
 
-This is some info about papillon mer.
-This is otherwise known as the output for { { content } }, which is only in the right side of the layout. Right now, you need to figure out how to generate content on the left side, specific to the project...
-
-And then also add the 'related projects' at the bottom of EVERY post!

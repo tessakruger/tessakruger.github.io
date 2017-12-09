@@ -1,8 +1,0 @@
----
-layout: post
-title:  "Design Project 1"
-date:   2017-11-01 23:22:06 +0000
-categories: design
-img_ext: /projects/logo01.jpg
-permalink: /projects/test
----
