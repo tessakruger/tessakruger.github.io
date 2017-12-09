@@ -11,7 +11,7 @@
 	}
 
 	.kruger {
-		margin: -35px 0 0 125px;
+		margin: -22px 0 0 120px;
 		text-align: left;
 
 		.hidden-load {
@@ -22,7 +22,9 @@
 		#typewriter{
 				font-size: 5em;
 				margin: 0;
-				font-family: $anonymous;
+				font-family: $museo;
+				letter-spacing: 5px;
+				text-transform: uppercase;
 
 				&:after{
 					content: "_";
