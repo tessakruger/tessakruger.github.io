@@ -7,11 +7,19 @@
 		<div class="wrapper">
 		
 			<div class="wrapper--navbar fixed">
+				{% if page.is_post %}
+				<div id="hoverdown"><i class="fa fa-bars fa-2x icon-light" aria-hidden="true"></i>
+					<div id="nav" class="post">
+						{% include navigation.html %}
+					</div>
+				</div>
+				{% else %}
 				<div id="hoverdown"><i class="fa fa-bars fa-2x icon-dark" aria-hidden="true"></i>
 					<div id="nav">
 						{% include navigation.html %}
 					</div>
 				</div>
+				{% endif %}
 			</div>
 			{% if page.is_post %}
 			{% for item in page.section %}
