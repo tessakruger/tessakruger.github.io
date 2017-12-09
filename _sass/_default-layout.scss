@@ -4,12 +4,12 @@
 
 	.wrapper--navbar {
 		padding: 25px 0;
-		background: #fff;
+		background: none;
 		min-width: 100px;
-		color: aquamarine;
 		text-align: center;
 		margin: 0;
 		height: 100%;
+		z-index: 999;
 
 		div {
 			padding: 15px 0;
@@ -21,6 +21,10 @@
 			
 			&:hover {
 				background: $light-blue;
+			}
+
+			&.post a {
+				color: #fff;
 			}
 		}
 	}
@@ -35,7 +39,8 @@
 	    padding: 90px 25px 0;
 
 	    &.left-post {
-	    	width: calc(60% - 100px);
+	    	width: calc(60%);
+	    	margin-left: 0;
 	    }
 	}
 
@@ -83,7 +88,7 @@
 }
 
 .projects {
-	display: flex;
+	// display: flex;
 	flex-direction: column;
 
 	.project-item {

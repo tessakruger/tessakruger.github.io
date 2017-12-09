@@ -4,4 +4,10 @@
 
 #hoverdown {
 	cursor: pointer;
+	opacity: 0.5;
+	transition: all 250ms ease-in-out;
+
+	&:hover {
+		opacity: 1;
+	}
 }

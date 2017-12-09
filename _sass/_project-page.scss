@@ -4,14 +4,14 @@
 
 	.slider-wrap {
 	  width: 100%;
-	  height: 500px;
+	  height: 60vh;
 	  margin: 20px auto;
 	  position: absolute;
 	  overflow: hidden;
 
 	  .slider-nav {
 	    text-align: center;
-	    margin: 10px 0 0 0;
+	    margin: 10px 0 25px 0;
 
 	    a {
 	      width: 12px;
@@ -30,14 +30,14 @@
 	  }
 
 	  .slider {
-	    overflow-x: scroll;
+	    overflow-x: hidden;
 
 	      .slide {
 	        float: left;
 	        width: 500px;
-	        height: 500px;
+	        height: 53vh;
 	        position: relative;
-	        background-position: 0 center;
+	        background-position: center center;
 	        background-size: contain;
 	        background-repeat: no-repeat;
 	      }

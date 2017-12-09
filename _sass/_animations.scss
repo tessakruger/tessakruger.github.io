@@ -3,6 +3,7 @@
 	flex-direction: column;;
 	padding: 40px 15px;
 	align-items: center;
+	height: 50%;
 
 	.tessa {
 		max-width: 380px;
@@ -10,7 +11,7 @@
 	}
 
 	.kruger {
-		margin: -40px 0 0 125px;
+		margin: -35px 0 0 125px;
 		text-align: left;
 
 		.hidden-load {
@@ -42,77 +43,80 @@
 
 .choose {
 	text-align: center;
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	align-content: center;
 	margin: 90px auto 0;
-	flex-wrap: wrap;
+	width: 100%;
+
+	.controls {
+		width: 100%;
+		display: flex;
+		justify-content: space-around;
+	}
 
 	button {
-		border: 2px solid aquamarine;
-		background: #fff;
+		border: none;
+		background: none;
 		border-radius: none;
-		color: #333;
+		color: #c0c9ce;
 		text-transform: uppercase;;
 		min-width: 140px;
 		padding: 15px 40px;
 		margin: 5px;
 		transition: all 250ms ease-in-out;
+		font-size: 18px;
 
 		&:hover,
 		&:focus {
-			background: aquamarine;
-			color: #fff;
+			background: none;
+			border: none;
 		}
 	}
 }
 
 
-.left-brain,
-.right-brain {
-	position: fixed;
-	z-index: -1;
-	display: none;
-	height: 2400px;
-	width: 80%;
-	top: -550px;
+// .left-brain,
+// .right-brain {
+// 	position: fixed;
+// 	z-index: -1;
+// 	display: none;
+// 	height: 2400px;
+// 	width: 80%;
+// 	top: -550px;
 
-	div {
-		-webkit-transform: rotate(-10deg);
-		margin-top: 91px;
-		margin-left: -100px;
-		text-align: left;
-		left: 0;
-	}
-}
+// 	div {
+// 		-webkit-transform: rotate(-10deg);
+// 		margin-top: 91px;
+// 		margin-left: -100px;
+// 		text-align: left;
+// 		left: 0;
+// 	}
+// }
 
-.left-brain {
-	background: $yellow;
-	left: -460px;
-	-webkit-transform: rotate(30deg);
+// .left-brain {
+// 	background: $yellow;
+// 	left: -460px;
+// 	-webkit-transform: rotate(30deg);
 
-}
+// }
 
-.right-brain {
-	background: $dark-blue;
-	right: -460px;
-	-webkit-transform: rotate(-30deg);
-}
+// .right-brain {
+// 	background: $dark-blue;
+// 	right: -460px;
+// 	-webkit-transform: rotate(-30deg);
+// }
 
-@media (max-width: 1347px) {
-	.left-brain {
-		-webkit-transform: rotate(70deg);
-		top: -1000px;
-		left: -300px;
-	}
+// @media (max-width: 1347px) {
+// 	.left-brain {
+// 		-webkit-transform: rotate(70deg);
+// 		top: -1000px;
+// 		left: -300px;
+// 	}
 
-	.right-brain {
-		-webkit-transform: rotate(-70deg);
-		top: -1000px;
-		right: -300px;
-	}
-}
+// 	.right-brain {
+// 		-webkit-transform: rotate(-70deg);
+// 		top: -1000px;
+// 		right: -300px;
+// 	}
+// }
 
 @media (max-width: 600px) {
 	.tk-logo .kruger {
@@ -120,13 +124,13 @@
 
 		#typewriter { font-size: 4.5em; }
 	}
-	.left-brain {
-		-webkit-transform: rotate(80deg);
-	}
+	// .left-brain {
+	// 	-webkit-transform: rotate(80deg);
+	// }
 
-	.right-brain {
-		-webkit-transform: rotate(-80deg);
-	}
+	// .right-brain {
+	// 	-webkit-transform: rotate(-80deg);
+	// }
 }
 
 @media (max-width: 380px) {
