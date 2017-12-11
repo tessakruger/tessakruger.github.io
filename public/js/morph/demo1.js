@@ -36,6 +36,7 @@
 
 	let loaded;
 	const navigate = () => {
+		$('#content').animate({'opacity': '1'}, 400);
 		if ( loaded ) return;
 		loaded = true;
 
@@ -60,9 +61,11 @@
 			easing: 'easeOutQuad',
 			d: DOM.path.getAttribute('pathdata:id')
 		});
+		$('html').css({'overflow-y': 'scroll', 'overflow': '-moz-scrollbars-vertical'});
 	};
 
 	const navigate2 = () => {
+		$('#content').animate({'opacity': '1'}, 400);
 		if ( loaded ) return;
 		loaded = true;
 
@@ -87,6 +90,7 @@
 			easing: 'easeOutQuad',
 			d: DOM.path.getAttribute('pathdata:id')
 		});
+		$('html').css({'overflow-y': 'scroll', 'overflow': '-moz-scrollbars-vertical'});
 	};
 
 	let isActive;
