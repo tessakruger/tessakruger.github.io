@@ -3,14 +3,22 @@
   {% include head.html %}
 
 	<body>
+		{% include splash-page.html %}
 
 		<div class="wrapper" id="content">
 		
-			<div class="wrapper--navbar fixed">
+			<div id="post-nav" class="wrapper--navbar fixed">
 				{% if page.is_post %}
-				<div id="hoverdown"><i class="fa fa-bars fa-2x icon-light" aria-hidden="true"></i>
-					<div id="nav" class="post">
-						{% include navigation.html %}
+				{% for post in page.section %}
+				<div id="hoverdown""><i class="fa fa-bars fa-2x icon-light" aria-hidden="true"></i>
+				{% endfor %}
+					<div id="white-nav">
+						<div id="nav" class="post">
+							{% include navigation.html %}
+							<a href="http://google.ca" style="display: block"><img src="{{ site.url }}/{{ site.image_path }}/github-w.svg"></a>
+							<a href="#" style="display: block"><img src="{{ site.url }}/{{ site.image_path }}/linkedin-w.svg"></a>
+							<a href="#" style="display: block"><img src="{{ site.url }}/{{ site.image_path }}/resume-w.svg"></a>
+						</div>
 					</div>
 				</div>
 				{% else %}
@@ -19,11 +27,17 @@
 						{% include navigation.html %}
 					</div>
 				</div>
+				<a href="http://google.ca" style="display: block"><img src="{{ site.url }}/{{ site.image_path }}/github.svg"></a>
+				<a href="#" style="display: block"><img src="{{ site.url }}/{{ site.image_path }}/linkedin.svg"></a>
+				<a href="#" style="display: block"><img src="{{ site.url }}/{{ site.image_path }}/resume.svg"></a>
+				<div class="nav-logo">
+					<a href="{{ site.url }}"><img id="tk-logo" src="{{ site.url }}/{{ site.image_path }}/tk-logo.svg"></a>
+				</div>
 				{% endif %}
 			</div>
 			{% if page.is_post %}
 			{% for item in page.section %}
-				<div class="wrapper--left-side fixed left-post" style="{{ item.bg }}">
+				<div class="wrapper--left-side fixed left-post" style="background:{{ item.color }}">
 					{% include project-assets.html %}
 				</div>
 			{% endfor %}
