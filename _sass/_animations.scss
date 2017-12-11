@@ -1,17 +1,17 @@
 .tk-logo {
 	display: flex;
 	flex-direction: column;;
-	padding: 40px 15px;
+	padding: 75px 15px;
 	align-items: center;
 	height: 50%;
 
 	.tessa {
-		max-width: 380px;
+		max-width: 300px;
 		width: 100%;
 	}
 
 	.kruger {
-		margin: -22px 0 0 120px;
+		margin: -40px 0 0 138px;
 		text-align: left;
 
 		.hidden-load {
@@ -24,7 +24,7 @@
 				margin: 0;
 				font-family: $museo;
 				letter-spacing: 5px;
-				text-transform: uppercase;
+				// text-transform: uppercase;
 
 				&:after{
 					content: "_";
