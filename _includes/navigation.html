@@ -20,15 +20,19 @@
 <!--     <div> -->
         <!-- <a href="{{ site.baseurl }}{{ entry.url }}">{{ entry.title }}</a> -->
             {% for sublink in sublinks %}
-            <div data-filter=".{{ sublink.category }}">
-                    <a href="{{ site.baseurl }}{{ sublink.url }}" class="sublink">{{ sublink.title }}</a>
-            </div>
+            <a href="{{ site.baseurl }}{{ sublink.url }}" class="sublink" style="display: block">
+                <div data-filter=".{{ sublink.category }}">
+                    {{ sublink.title }}
+                </div>
+            </a>
             {% endfor %}
     <!-- </div> -->
     {% else %}
-    <div>
-    	<a href="{{ site.baseurl }}{{ entry.url }}">{{ entry.title }}</a>
-    </div>
+    <a href="{{ site.baseurl }}{{ entry.url }}" style="display: block">
+        <div data-filter=".{{ entry.category }}">
+        	{{ entry.title }}
+        </div>
+    </a>
     {% endif %}
 {% endfor %}
 

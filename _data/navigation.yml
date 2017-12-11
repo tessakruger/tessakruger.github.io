@@ -1,17 +1,25 @@
 # Belongs at: /_data/navigation.yml
 ---
-- title: Home
-  url: /
-  
 - title: Projects
-  url: /projects/
-  sublinks:
-    - title: Code
-      url: /projects/#code
-      category: code
-    - title: Design
-      url: /projects/#design
-      category: design
+  url: /
+
+- title: Code
+  url: /#code
+  category: code
+
+- title: Design
+  url: /#design
+  category: design
+  
+# - title: Projects
+#   url: /projects/
+#   sublinks:
+#     - title: Code
+#       url: /#code
+#       category: code
+#     - title: Design
+#       url: /#design
+#       category: design
 
 - title: Tech
   url: /tech/
