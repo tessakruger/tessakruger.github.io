@@ -1,6 +1,6 @@
-.current {
-	background: $light-blue;
-}
+// .current {
+// 	background: $light-blue;
+// }
 
 #hoverdown {
 	cursor: pointer;
@@ -9,5 +9,9 @@
 
 	&:hover {
 		opacity: 1;
+	}
+
+	#white-nav a {
+		color: #fff;
 	}
 }
