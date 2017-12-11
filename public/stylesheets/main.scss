@@ -23,6 +23,8 @@
 @import "header";
 @import "project-page";
 @import "splash-page";
+@import "left-side";
+@import "more-projects";
 
 /* Animations */
 @import "animations";
@@ -32,6 +34,7 @@
 
 /* Layout specific */
 @import "default-layout";
+@import "mobile";
 
 /* Fonts */
 @import url('https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700');
@@ -70,8 +73,7 @@
 }
 
 html {
-    overflow: -moz-scrollbars-vertical; 
-    overflow-y: scroll;
+    overflow: hidden;
 }
 
 body {
@@ -125,25 +127,10 @@ p {
 	font-size: $type-size-5;
 }
 
-a {	
-	font-family: $museo-bold;
-	color: $dark-blue;
-	text-decoration: none;
-	font-weight: 900;
-	text-transform: uppercase;
-	margin: 5px 0;
-	transition: all 250ms ease-in-out;
-}
-
-a:hover,
-a:focus {
-	color: $yellow;
-}
-
 button {
 	background: $light-blue;
 	border: none;
-	border-radius: 8px;
+	border-radius: 3px;
 	border-bottom: 4px solid #a9b2b7;
 	color: $dark-blue;
 	padding: 12px 35px;
@@ -164,11 +151,6 @@ li {
 	list-style: none;
 }
 
-.logo {
-	width: 200px;
-	margin: 10px;
-}
-
 .icon-dark {
 	color: $dark-blue;
 }
@@ -187,58 +169,7 @@ li {
 	}
 }
 
-.cardWrapper{
-  width:200px;
-  height:200px;
-  position:relative;
-  float:left;
-  margin:5px;
-  cursor:pointer;
-  -webkit-font-smoothing:antialiased;
-
-  .cardFace{
-    position:absolute;
-    width:200px;
-    height:200px;
-    overflow:hidden;
-    border-right:solid 6px #a9b2b7;
-    padding: 10px;
-    border-radius: 8px;
-
-    &.front{
-      background-color:$light-blue;
-
-      h3 {
-      	font-size: 2.2vw;
-      	word-wrap: break-word;
-      }
-
-      i {
-      	position: absolute;
-      	bottom: 12px;
-      	right: 12px;
-      }
-    }
-
-    &.back{
-      background-color:$dark-blue;
-      color: white;
-      border-right: solid 6px $dark-blue;
-      border-left: solid 6px #111b21;
-
-      i {
-      	margin: 0;
-      	position: absolute;
-      	top: 50%;
-      	left: 50%;
-      	transform: translate(-50%, -50%);
-      }
-    }
-  }
+.full {
+	background: #333;
 }
 
-.more-projects,
-.navigate {
-	margin-top: 100px;
-	clear: right;
-}
