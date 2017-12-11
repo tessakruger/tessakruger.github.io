@@ -4,39 +4,37 @@
 
 	<div>
 	{% for post in site.posts limit:6 %}
-	  {% if post.url != page.url %} 
-	    {% if forloop.index < 6 or found %}
-	    <a href="{{ post.url }}">
-	    	<div class="cardWrapper">
-		      <div class="card">
-		        <div class="cardFace front">
-		        	<h3>
-			        	<li>
-			        		{{ post.title }}
-			      		</li>
-			      	</h3>
-			      	{% if post.categories contains "code" %}
-			      		<i class="fa fa-code" aria-hidden"true"></i>
-			      	{% else %}
-			      		<i class="fa fa-pencil" aria-hidden"true"></i>
-			      	{% endif %}
-			     </div>
-		        <div class="cardFace back">
-		        	<i class="fa fa-play fa-3x"></i>
-		        </div>
-		      </div>
-		    </div>
-		</a>
-	    {% endif %}
-	  {% else %}
-	    {% assign found = true %}
-	  {% endif %}
+		{% for prop in post.section %}
+		  {% if post.url != page.url %} 
+		    {% if forloop.index < 6 or found %}
+		    <a href="{{ post.url }}" style="display: block">
+		    	<div class="cardWrapper">
+			      <div class="card">
+			        <div class="cardFace front" style="background:{{ prop.color }}; border-right: solid 5px {{ prop.dark }}">
+			        	<h3>
+			        	<li>{{ post.title }}</li>
+			      	  </h3>
+			      	  {% if post.categories contains "code" %}
+			      		<i class="fa fa-code" aria-hidden"true" style="color:{{prop.dark}}"></i>
+			      	  {% else %}
+			      		<i class="fa fa-pencil" aria-hidden"true" style="color:{{prop.dark}}"></i>
+			      	  {% endif %}
+				    </div>
+				     
+			        <div class="cardFace back" style="background:{{ prop.color }}; border-left: solid 5px {{ prop.dark }}">
+		        	  <img src="{{ site.url }}/{{ site.image_path }}{{ post.icon }}">
+			        </div>
+
+			      </div>
+			    </div>
+			</a>
+		    {% endif %}
+		  {% else %}
+		    {% assign found = true %}
+		  {% endif %}
+	  {% endfor %}
 	{% endfor %}
 	</div>
 </div>
-	<div class="navigate">
-		<a href="{{ site.baseurl }}/projects"><i class="fa fa-undo" aria-hidden="true"></i> Ahhh CTRL/CMD+Z me outta here!</a>
-	</div>
-
 
 <script src="../public/js/flip-card.js"></script>
