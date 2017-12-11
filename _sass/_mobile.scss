@@ -54,15 +54,18 @@
 		    .main-intro {
 		    	display: flex;
 		    	padding: 15px;
+		    	max-width: 1224px;
+		    	margin: auto;
 
 		    	.intro-text {
 		    		flex: 1;
 		    		position: inherit;
 		    		margin: auto;
+		    		text-align: center;
 
 		    		h1:first-child {
 		    			margin-top: 0;
-		    			margin-left: 70px;
+		    			margin-left: 20px;
 		    		}
 
 		    		h1:nth-child(2) {
@@ -110,7 +113,7 @@
 
 		.wrapper--right-side {
 			width: 100%;
-		    margin: 0;
+		    margin: auto;
 		    padding: 15px 50px;
 		    position: relative;
 		    padding-bottom: 150px;
@@ -133,15 +136,10 @@
 
 		    .main-intro {
 		    	flex-wrap: wrap;
-		    	text-align: center;
 
 		    	.intro-text {
 		    		width: 100%;
 		    		flex: none;
-
-		    		h1:first-child {
-		    			margin-left: 20px;
-		    		}
 		    	}
 		    }
 		}
