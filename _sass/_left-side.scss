@@ -1,0 +1,44 @@
+.main-intro {
+	height: 100%;
+	width: 100%;
+	position: relative;
+
+	.intro-text {
+		position: absolute;
+		z-index: 1;
+		margin-top: -120px;
+
+		h1 {
+			font-family: $king;
+			text-transform: none;
+			font-size: 5em;
+			font-weight: normal;
+			letter-spacing: 0;
+
+			&:first-child {
+				margin-left: 70px;
+			}
+
+			&:nth-child(2) {
+				margin-top: -120px;
+				color: $yellow;
+			}
+		}
+	}
+
+	.mini-bio {
+		text-align: right;
+		width: 90%;
+		margin: 75px 0 auto auto;
+		margin-right: 0;
+		position: relative;
+		z-index: 1;
+	}
+
+	img {
+		position: absolute;
+		bottom: 0;
+		right: -55px;
+		max-height: 80%;
+	}
+}
