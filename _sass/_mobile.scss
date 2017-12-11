@@ -1,0 +1,162 @@
+@media screen and (max-width: 1060px), screen and (max-height: 900px) {
+	#content {
+		display: flex;
+		flex-direction: column;
+
+		#post-nav {
+			width: 100%;
+    		flex-direction: row;
+    		position: inherit;
+    		text-align: left;
+    		padding: 15px;
+    		align-items: flex-start;
+
+    		.nav-logo {
+    			position: inherit;
+    			transform: none;
+    			text-align: right;
+    			flex: 4;
+    		}
+
+    		#hoverdown {
+    			margin-right: 20px;
+    			margin-top: 12px;
+    		}
+		}
+
+		.wrapper--navbar a {
+			margin-top: 23px;
+
+			img {
+				margin: auto;
+				padding: 0 5px;
+	    		width: 40px;
+			}
+
+		}
+
+		.wrapper--navbar div {
+			width: auto;
+			padding: 10px 0;
+
+			&.nav-logo a img {
+				width: auto;
+				height: 60px;
+			}
+		}
+
+		.wrapper--left-side {
+			width: 100%;
+		    margin: 0;
+		    padding: 0;
+		    position: relative;
+
+		    .main-intro {
+		    	display: flex;
+		    	padding: 15px;
+
+		    	.intro-text {
+		    		flex: 1;
+		    		position: inherit;
+		    		margin: auto;
+
+		    		h1:first-child {
+		    			margin-top: 0;
+		    			margin-left: 70px;
+		    		}
+
+		    		h1:nth-child(2) {
+		    			margin-bottom: 0;
+		    		}
+		    	}
+
+		    	.mini-bio {
+		    		flex: 2;
+		    		margin: auto;
+		    		text-align: justify;
+		    		width: 100%;
+
+		    		p {
+		    			margin: 0;
+		    		}
+		    	}
+
+		    	.cartoon {
+		    		flex: 1;
+	    		    position: relative;
+	    		    padding: 0 0 0 15px;
+	    		    align-self: flex-end;
+	    		    text-align: center;
+
+		    		img {
+		    			position: inherit;
+		    			right: 0px;
+		    			bottom: -15px;
+		    			max-height: 300px;
+		    			-moz-transform: scaleX(-1);
+		    			-o-transform: scaleX(-1);
+		    			-webkit-transform: scaleX(-1);
+		    			transform: scaleX(-1);
+		    			filter: FlipH;
+		    			-ms-filter: "FlipH";
+		    		}
+		    	}
+		    }
+
+		    .slider-wrap {
+		    	position: relative;
+		    }
+		}
+
+		.wrapper--right-side {
+			width: 100%;
+		    margin: 0;
+		    padding: 15px 50px;
+		    position: relative;
+		    padding-bottom: 150px;
+
+		    .content__inner {
+		    	height: 100%;
+		    }
+		}
+
+		.wrapper--category {
+			display: none;
+		}
+	}
+}
+
+@media screen and (max-width: 580px) {
+	#content {
+
+		.wrapper--left-side {
+
+		    .main-intro {
+		    	flex-wrap: wrap;
+		    	text-align: center;
+
+		    	.intro-text {
+		    		width: 100%;
+		    		flex: none;
+
+		    		h1:first-child {
+		    			margin-left: 20px;
+		    		}
+		    	}
+		    }
+		}
+
+		.wrapper--right-side {
+			padding: 15px;
+
+			.project-item {
+				flex-direction: column;
+				word-break: break-word;
+			}
+
+			button {
+				margin: 4px 2px;
+			}
+		}
+	}
+}
