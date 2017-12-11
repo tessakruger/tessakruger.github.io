@@ -1,16 +1,12 @@
 $(document).ready(function (){
-	if (!localStorage.getItem("visited")) {
-		$('#intro--overlay').show();
+	if (!sessionStorage.getItem("visited")) {
+		$('#intro--overlay').fadeIn();
 		//Set the key
-	    localStorage.setItem("visited", "true");
-	    $('#content').css('opacity', '1');
+	    sessionStorage.setItem("visited", "true");
+	    $('#content').animate({'opacity': '0'}, 500);
 	} else {
-		$('#content').css('opacity', '1');
+		$('#intro--overlay').hide();
+		$('#content').animate({'opacity': '1'}, 500);
+		$('html').css({'overflow-y': 'scroll', 'overflow': '-moz-scrollbars-vertical'});
 	}
-	
-
-	//clear localStorage on tab close
-	// window.onbeforeunload = function() {
-	//     localStorage.removeItem("visited");
-	// };
 })
