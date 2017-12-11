@@ -42,15 +42,17 @@
 				</div>
 			{% endfor %}
 				<div class="wrapper--right-side right-post">
-					{{ content }}
-					{% include more-projects.html %}
+					<div class="maximum-width">
+						{{ content }}
+						{% include more-projects.html %}
+					</div>
 				</div>
 			{% else %}
 				<div class="wrapper--left-side fixed">
 					{% include left-side.html %}
 				</div>
 
-				<div class="wrapper--right-side">
+				<div class="wrapper--right-side maximum-width">
 					{{ content }}
 				</div>
 			{% endif %}

@@ -4,66 +4,6 @@
 	@include flexbox();
 	@include justify-content(flex-start);
 
-	.wrapper--navbar {
-		padding: 25px 0;
-		background: none;
-		min-width: 100px;
-		text-align: center;
-		margin: 0;
-		height: 100%;
-		z-index: 1;
-		display: flex;
-		flex-direction: column;
-
-		div {
-			padding: 15px 0;
-			width: 100%;
-
-			&.nav-logo {
-				transform: rotate(-90deg);
-				position: absolute;
-				bottom: 0;
-
-				a {
-					opacity: 1;
-
-					img {
-						width: 100%;
-						padding: 0;
-					}
-				}
-			}
-		}
-
-		div#nav * {
-			transition: all 200ms ease-in-out;
-
-			&.post a {
-				color: #fff;
-			}
-		}
-
-		a {
-			background: none;
-			opacity: 0.5;
-
-			img {
-				padding: 0 25px;
-				width: 85px;
-				margin: 0 auto 12px auto;
-
-				&#tk-logo {
-					margin: 0 auto 0 30px;
-				}
-			}
-
-			&:hover {
-				background: none;
-				opacity: 1;
-			}
-		}
-	}
-
 	.wrapper--left-side {
 		@include flexbox();
 	    background: $light-blue;
@@ -87,7 +27,6 @@
 		padding: 0 50px 250px;
 		z-index: 1;
 		width: 100%;
-		max-width: 1224px;
 
 		&.right-post {
 			margin: 0 0 auto 60%;
