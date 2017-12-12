@@ -109,3 +109,49 @@
 	}
 
 }
+
+// contact page
+.contact--wrapper {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	text-align: center;
+
+	.contact--info {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		flex: 1;
+		width: 100%;
+		min-width: 150px;
+		margin: 20px;
+
+		a {
+			border: 2px solid $dark-blue;
+			border-radius: 8px;
+			padding: 20px 15px 0 15px;
+			height: 100%;
+
+			.contact--icon {
+				transition: color 250ms ease-in-out;
+
+				&:hover {
+					color: $yellow;
+				}
+			}
+
+			h4 {
+				text-transform: none;
+				font-family: $museo;
+			}
+		}
+
+		p {
+			font-weight: 600;
+			letter-spacing: 1px;
+			text-transform: uppercase;
+			font-size: 0.8em;
+			word-break: break-word;
+		}
+	}
+}
