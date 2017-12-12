@@ -1,23 +1,23 @@
 ---
 layout: page
-title: About
+title: about
 permalink: /about/
 sidebar: about;
 section:
-  logo: hi there!
-  bio: Get to know a bit more about me
-  img: here is an illustration of me
+  bio: So, you wanna know more eh?
+  img: /tessadrawing.svg
 ---
+I earned my B.Sc in Life Sciences with a minor in History from this [university][mac] in Hamilton
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+After many years wearing many hats at an event admissions solutions company, I discovered my passion for problem solving resided in writing code. I attended a bootcamp where I am now also a mentor shaping the young minds of tomorrow.
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+I love maps. I love looking at Google Maps. I love working with Google Maps APIs. I travel a lot and have an uncanny sense of direction.
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+I have an impossibly adorable dog named Heidi.
+
+Sometimes I like to tinker around on [codepen][codepen].
 
 
-[jekyll-organization]: https://github.com/jekyll
+[codepen]: https://codepen.io/tessakruger/
+[mac]: http://www.mcmaster.ca/
+[lhl]: https://lighthouselabs.ca/
