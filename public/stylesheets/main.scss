@@ -25,6 +25,7 @@
 @import "splash-page";
 @import "left-side";
 @import "more-projects";
+@import "tech-stack";
 
 /* Animations */
 @import "animations";
@@ -74,11 +75,12 @@
 
 html {
     overflow: hidden;
+    background: #ecf0f1;
 }
 
 body {
 	font-family: $museo;
-	color: $dark-gray;
+	color: $dark-blue;;
 }
 
 h1,
@@ -174,6 +176,6 @@ li {
 }
 
 .maximum-width {
-	max-width: 1024px;
+	max-width: 1224px;
 	margin: auto;
 }
