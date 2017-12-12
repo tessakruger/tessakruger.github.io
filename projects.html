@@ -1,33 +1,39 @@
 ---
 layout: page
-title: Projects
+title: projects
 sidebar: projects;
 permalink: /projects/
 section:
   logo: tessa kruger
-  bio: Here's a little info about moi
-  img: here is an illustration of me
+  bio: My name is Tessar. But you can call me Tessa. I push pixels and bring them to life. I play cornhole, strum the ukulele, and dig old school hip hop, 80s cars and volleyballs. I'm a freelance web developer and designer and I love to turn visions into reality.
+  img: /tessadrawing.svg
 ---
-<div class="controls">
-	<button type="button" class="control" data-filter=".code">Code</button>
-	<button type="button" class="control" data-filter=".design">Design</button>
-	<button type="button" class="control" data-filter="all">All</button>
-</div>
-<div class="container projects">
-	{% for post in site.posts %}
-	<div class="mix {{ post.categories }} project-item">
-		<div class="">
-		 	<a href="{{ post.url }}"><img src="{{ site.url }}/{{ site.image_path }}{{ post.img_ext }}" class="logo"></a>
+<div class="content content--fixed">
+	<div class="content__inner">
+		<div class="controls">
+			<button type="button" class="control" data-filter=".code">Code</button>
+			<button type="button" class="control" data-filter=".design">Design</button>
+			<button type="button" class="control" data-filter="all">All</button>
 		</div>
-		<div class="info">
-			<h5>{{ post.month }}</h5>
-			{% for item in post.section%}
-			<a href="{{ post.url }}"><h2>{{ item.client }}</h2></a>
-			<p>{{ item.tech }}</p>
+		<div class="container projects">
+			{% for post in site.posts %}
+			<a href="{{ post.url }}" style="display: block">
+				<div class="mix {{ post.categories }} project-item">
+					<div>
+						<img src="{{ site.url }}/{{ site.image_path }}{{ post.img_ext }}" class="logo">
+					</div>
+					<div class="info">
+						<h5>{{ post.month }}</h5>
+						{% for item in post.section%}
+						<h2>{{ item.client }}</h2>
+						<p>{{ item.tech }}</p>
+						{% endfor %}
+					</div>
+				</div>
+			</a>
 			{% endfor %}
 		</div>
 	</div>
-	{% endfor %}
 </div>
 
 <script>
