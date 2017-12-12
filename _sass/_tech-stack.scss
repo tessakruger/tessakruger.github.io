@@ -1,0 +1,146 @@
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.set-size {
+  font-size: 9em;
+}
+.charts-container{
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1040px;
+  margin: auto;
+
+  .tech {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    p {
+      font-size: 0.13em;
+      margin-top: 0;
+    }
+  }
+}
+.pie-wrapper {
+  height: 1em;
+  width: 1em;
+  float: left;
+  margin: 15px;
+  position: relative;
+
+  &:nth-child(3n+1) {
+    clear: both;
+  }
+
+  .label {
+    background: none;
+    border-radius: 50%;
+    bottom: 0.4em;
+    color: #7f8c8d;
+    cursor: default;
+    display: block;
+    font-size: 0.25em;
+    left: 0.4em;
+    line-height: 3em;
+    position: absolute;
+    right: 0.4em;
+    text-align: center;
+    top: 0.4em;
+    font-family: $museo-bold;
+
+    img {
+      width: 50%;
+    }
+  }
+
+  .pie {
+    height: 100%;
+    width: 100%;
+    clip: rect(auto, auto, auto, auto);
+    left: 0;
+    position: absolute;
+    top: 0;
+
+    .right-side,
+    .left-side {
+      -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+    }
+
+    .half-circle {
+      height: 100%;
+      width: 100%;
+      border: 0.1em solid #3498db;
+      border-radius: 50%;
+      clip: rect(0, 0.5em, 1em, 0);
+      left: 0;
+      position: absolute;
+      top: 0;
+    }
+
+    .html {
+      border-color: #e65d46;
+    }
+
+    .css {
+      border-color: #11a3cf;
+    }
+
+    .js {
+      border-color: #f7cf6f;
+    }
+
+    .react {
+      border-color: #4cc3d9;
+    }
+
+    .sass {
+      border-color: #cb7a9c;
+    }
+
+    .rails {
+      border-color: #cc3533;
+    }
+
+    .shopify {
+      border-color: #a1b25a;
+    }
+
+    .ai {
+      border-color: #ff8148;
+    }
+
+    .psd {
+      border-color: #0fc8ea;
+    }
+
+    .node {
+      border-color: #9db655;
+    }
+  }
+
+  .shadow {
+    height: 100%;
+    width: 100%;
+    border: 0.1em solid #d5dee2;
+    border-radius: 50%;
+  }
+}
+
+#progress-95 .left-side {
+  -webkit-transform: rotate(342deg);
+          transform: rotate(342deg);
+}
+
+#progress-90 .left-side {
+  -webkit-transform: rotate(324deg);
+          transform: rotate(324deg);
+}
+
+#progress-75 .left-side {
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+}
