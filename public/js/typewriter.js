@@ -23,7 +23,6 @@ startCursive = function(callback){
 }
 
 function setupTypewriter(t) {
-    console.log('setup typewriter...');
     var HTML = t.innerHTML;
 
     t.innerHTML = "";
@@ -36,8 +35,6 @@ function setupTypewriter(t) {
         tempTypeSpeed = 0;
 
     var type = function() {
-
-        console.log('start typing...');
     
         if (writingTag === true) {
             tag += HTML[cursorPosition];
@@ -102,7 +99,6 @@ animate = function(){
             'visibility', 'visible').hide().fadeIn(250))
         .promise()
         .done(function() {
-            console.log('end of animation');
             $('.hidden-load').css('color', '#f8c000');
             startTyping();
         })

@@ -29,10 +29,14 @@
 	</div>
 </div><!-- /content -->
 
-<script src="public/js/morph/imagesloaded.pkgd.min.js"></script>
-<script src="public/js/morph/charming.min.js"></script>
-<script src="public/js/morph/anime.min.js"></script>
-<script src="public/js/morph/demo1.js"></script>
+<script type="text/javascript">
+	if ( window.location.pathname == '/' ) {
+		$.getScript( "public/js/morph/imagesloaded.pkgd.min.js" );
+		$.getScript( "public/js/morph/charming.min.js" );
+		$.getScript( "public/js/morph/anime.min.js" );
+		$.getScript( "public/js/morph/demo1.js" );
+	}
+</script>
 
 <script src="//s3-us-west-2.amazonaws.com/s.cdpn.io/16327/DrawSVGPlugin.js?r=11"></script>
 <script src="/public/js/typewriter.js"></script>
