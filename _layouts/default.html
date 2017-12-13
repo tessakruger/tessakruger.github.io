@@ -7,11 +7,10 @@
 		{% include splash-page.html %}
 
 		<div class="wrapper" id="content">
-		
-			<div id="post-nav" class="wrapper--navbar fixed">
-				{% if page.is_post %}
+			{% if page.is_post %}
+			<div id="post-nav" class="wrapper--navbar fixed post">
 				{% for post in page.section %}
-				<div id="hoverdown""><i class="fa fa-bars fa-2x icon-light" aria-hidden="true"></i>
+				<div id="hoverdown" class="left"><i class="fa fa-bars fa-2x icon-light" aria-hidden="true"></i>
 				{% endfor %}
 					<div id="white-nav">
 						<div id="nav" class="post">
@@ -22,7 +21,8 @@
 						</div>
 					</div>
 				</div>
-				{% else %}
+			{% else %}
+			<div id="post-nav" class="wrapper--navbar fixed">
 				<div id="hoverdown"><i class="fa fa-bars fa-2x icon-dark" aria-hidden="true"></i>
 					<div id="nav">
 						{% include navigation.html %}

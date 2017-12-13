@@ -4,16 +4,15 @@
 		flex-direction: column;
 
 		#post-nav {
-			width: auto;
+			width: 100%;
 			height: auto;
     		flex-direction: row;
     		position: absolute;
-    		text-align: left;
     		padding: 15px;
     		align-items: flex-start;
 
     		.nav-logo {
-    			position: inherit;
+    			position: relative;
     			transform: none;
     			text-align: right;
     			flex: 4;
@@ -22,13 +21,6 @@
     		#hoverdown {
     			margin-right: 20px;
     			margin-top: 12px;
-
-    			#nav.post {
-    				background: $dark-gray;
-    				width: 100%;
-    				min-width: 250px;
-    				padding: 1px 15px 25px 15px;
-    			}
     		}
 		}
 
@@ -55,10 +47,9 @@
 
 		.wrapper--left-side {
 			width: 100%;
-		    margin: 0;
+		    margin: 110px 0 0 0;
 		    padding: 0;
 		    position: relative;
-		    height: 100vh;
 
 		    .main-intro {
 		    	display: flex;
@@ -76,7 +67,7 @@
 		    		}
 
 		    		h1:nth-child(2) {
-		    			margin-bottom: 0;
+		    			margin-bottom: -30px;
 		    		}
 		    	}
 
@@ -117,8 +108,16 @@
 		    	position: relative;
 
 		    	.slider-nav {
-		    		margin-top: 45px;
+		    		margin: 40px auto 25px auto;
+		    		width: max-content;
+		    		position: relative;
+		    		z-index: 999;
 		    	}
+		    }
+
+		    &.left-post {
+		    	height: 100vh;
+		    	margin: 0;
 		    }
 		}
 
@@ -167,5 +166,11 @@
 				margin: 4px 2px;
 			}
 		}
+	}
+}
+
+@media screen and (max-height: 360px) {
+	.slider-container .slider-wrap .slider .slide {
+		height: 55vh;
 	}
 }
