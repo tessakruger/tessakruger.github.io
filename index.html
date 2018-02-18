@@ -9,27 +9,28 @@ section:
 ---
 <div class="content content--fixed">
 	<div class="content__inner">
-		<div class="controls">
+		<div class="controls btn-controls">
 			<button type="button" class="control" data-filter=".code">Code</button>
 			<button type="button" class="control" data-filter=".design">Design</button>
 			<button type="button" class="control" data-filter="all">All</button>
 		</div>
-		<div class="container projects">
+		<div class="container projects2">
 			{% for post in site.posts %}
-			<a href="{{ post.url }}" style="display: block">
-				<div class="mix {{ post.categories }} project-item">
-					<div>
-						<img src="{{ site.url }}/{{ site.image_path }}{{ post.img_ext }}" class="logo">
-					</div>
-					<div class="info">
-						<h5>{{ post.month }}</h5>
-						{% for item in post.section%}
-						<h2>{{ item.client }}</h2>
-						<p>{{ item.tech }}</p>
-						{% endfor %}
-					</div>
-				</div>
-			</a>
+			{% for item in post.section%}
+			<div class="mix {{ post.category }} project-block grid">
+				<figure class="effect-julia">
+					<img src="{{ site.url }}/{{ site.image_path }}{{ post.img_ext }}">
+					<figcaption>
+						<h2><span>{{ item.client }}</span></h2>
+						<div>
+							<p class="month">{{ post.month }}</p>
+							<p>{{ item.tech }}</p>
+						</div>
+						<a href="{{ post.url }}">View more</a>
+					</figcaption>			
+				</figure>
+			</div>
+			{% endfor %}
 			{% endfor %}
 		</div>
 	</div>

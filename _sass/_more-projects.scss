@@ -1,4 +1,4 @@
-.cardWrapper{
+.project-card { //cardWrapper
   width: 130px;
   height: 130px;
   position:relative;
@@ -7,39 +7,35 @@
   cursor:pointer;
   -webkit-font-smoothing:antialiased;
 
-  .cardFace{
-    position:absolute;
-    width: 130px;
-    height: 130px;
-    overflow:hidden;
-    // border-right:solid 6px #a9b2b7;
-    padding: 10px;
-    border-radius: 6px;
+    .front, .back { //cardFace
+      position: absolute;
+      width: 130px;
+      height: 130px;
+      overflow:hidden;
+      padding: 10px;
+      border-radius: 6px;
 
-    h3 {
-      	font-size: 1.2em;
-      	word-wrap: break-word;
-      	color: #fff;
-      }
+      h3 {
+        	font-size: 1.2em;
+        	word-wrap: break-word;
+        	color: #fff;
+        }
 
       i {
       	position: absolute;
       	bottom: 12px;
       	right: 12px;
       }
-
-    &.front{
-      background: $light-blue;
-
-      img {
-      	max-width: 80%;
-      	margin: auto;
-      }
     }
 
-    &.back{
-      background-color:$dark-blue;
-      color: white;
+    .back {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+
+      img {
+        max-width: 80%;
+        margin: auto;
     }
   }
 }

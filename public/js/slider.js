@@ -29,14 +29,13 @@ $(document).ready (function(){
 	  
 	  bindUIEvents: function() {
 	    // You can either manually scroll...
-	    this.el.slider.on("scroll", function(event) {
-	      slider.moveSlidePosition(event);
-	    });
+	    // this.el.slider.on("scroll", function(event) {
+	    //   slider.moveSlidePosition(event);
+	    // });
 	    // ... or click a thing
-	    this.el.sliderNav.on("click", "a", function(event) {
-	    	console.log('clicked!');
-	      slider.handleNavClick(event, this);
-	    });
+	    // this.el.sliderNav.on("click", "a", function(event) {
+	    //   slider.handleNavClick(event, this);
+	    // });
 	    // What would be cool is if it had touch
 	    // events where you could swipe but it
 	    // also kinda snapped into place.
@@ -44,34 +43,32 @@ $(document).ready (function(){
 	  
 	  moveSlidePosition: function(event) {
 	    // Magic Numbers =(
-	    this.el.allSlides.css({
+	    // this.el.allSlides.css({
 	      // "background-position": $(event.target).scrollLeft()/6-100+ "px center",
-	      "background-position": " center center"
-	    });
+	    //   "background-position": " center center"
+	    // });
 	  },
 	  
-	  handleNavClick: function(event, el) {
-	    event.preventDefault();
-	    var position = $(el).attr("href").split("-").pop();
-	    this.el.slider.animate({
-	      scrollLeft: position * this.el.slideWidth
-	    }, this.timing);
-
-	    console.log(this.el.slideWidth);
-	    this.changeActiveNav(el);
-	  },
+	  // handleNavClick: function(event, el) {
+	  //   event.preventDefault();
+	  //   var position = $(el).attr("href").split("-").pop();
+	  //   this.el.slider.animate({
+	  //     scrollLeft: position * this.el.slideWidth
+	  //   }, this.timing);
+	  //   // this.changeActiveNav(el);
+	  // },
 	  
-	  changeActiveNav: function(el) {
-	    this.el.allNavButtons.removeClass("active");
-	    $(el).addClass("active");
-	  }
+	  // changeActiveNav: function(el) {
+	  //   this.el.allNavButtons.removeClass("active");
+	  //   $(el).addClass("active");
+	  // }
 	  
 	};
 
 	slider.init();
 
-	$('.slider-nav a').removeClass('active');
-	$('.slider-nav a:first-child').addClass('active');
+	// $('.slider-nav a').removeClass('active');
+	// $('.slider-nav a:first-child').addClass('active');
 
 	new ResizeSensor($('.slider-container'), function() {
 	    var slideWidth = $('.slider-container').width();
@@ -79,4 +76,5 @@ $(document).ready (function(){
 		$('.slider-wrap').css({"width": slideWidth + "px"});
 		slider.setSlideWidths();
 	});
+
 });

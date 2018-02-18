@@ -21,12 +21,13 @@
       {% for entry in site.data.navigation %}
         <a href="{{ site.baseurl }}{{ entry.url }}"><li>{{ entry.title }}</li></a>
       {% endfor %}
+
+      <div class="social-container project">
+        <a href="http://google.ca" style="display: block"><img src="{{ site.url }}/{{ site.image_path }}/github-w.svg"></a>
+        <a href="#" style="display: block"><img src="{{ site.url }}/{{ site.image_path }}/linkedin-w.svg"></a>
+        <a href="#" style="display: block"><img src="{{ site.url }}/{{ site.image_path }}/resume-w.svg"></a>
+      </div>
     </ul>
 
-  </div>
-  <div class="social-container">
-    <a href="http://google.ca" style="display: block"><img src="{{ site.url }}/{{ site.image_path }}/github.svg"></a>
-    <a href="#" style="display: block"><img src="{{ site.url }}/{{ site.image_path }}/linkedin.svg"></a>
-    <a href="#" style="display: block"><img src="{{ site.url }}/{{ site.image_path }}/resume.svg"></a>
   </div>
 </nav>

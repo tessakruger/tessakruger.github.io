@@ -2,39 +2,28 @@
 	<h3>Wow! Time really does fly when you're having fun</h3>
 	<p>I'm afraid that's the long and short of this project, but I've prepared a few more so there's no need to panic... yet.</p>
 
-	<div>
-	{% for post in site.posts limit:6 %}
-		{% for prop in post.section %}
-		  {% if post.url != page.url %} 
-		    {% if forloop.index < 6 or found %}
-		    <a href="{{ post.url }}" style="display: block">
-		    	<div class="cardWrapper">
-			      <div class="card">
-			        <div class="cardFace front" style="background:{{ prop.color }}; border-right: solid 5px {{ prop.dark }}">
-			        	<h3>
-			        	<li>{{ post.title }}</li>
-			      	  </h3>
-			      	  {% if post.categories contains "code" %}
-			      		<i class="fa fa-code" aria-hidden"true" style="color:{{prop.dark}}"></i>
-			      	  {% else %}
-			      		<i class="fa fa-pencil" aria-hidden"true" style="color:{{prop.dark}}"></i>
-			      	  {% endif %}
-				    </div>
-				     
-			        <div class="cardFace back" style="background:{{ prop.color }}; border-left: solid 5px {{ prop.dark }}">
-		        	  <img src="{{ site.url }}/{{ site.image_path }}{{ post.icon }}">
-			        </div>
-
-			      </div>
-			    </div>
-			</a>
-		    {% endif %}
-		  {% else %}
-		    {% assign found = true %}
-		  {% endif %}
-	  {% endfor %}
-	{% endfor %}
+	<div class="container projects2">
+		{% for post in site.posts %}
+			{% for item in post.section%}
+				{% if post.url != page.url %}
+					<div class="mix {{ post.category }} project-block grid">
+						<figure class="effect-julia">
+							<img src="{{ site.url }}/{{ site.image_path }}{{ post.img_ext }}">
+							<figcaption>
+								<h2><span>{{ item.client }}</span></h2>
+								<div>
+									<p class="month">{{ post.month }}</p>
+									<p>{{ item.tech }}</p>
+								</div>
+								<a href="{{ post.url }}">View more</a>
+							</figcaption>			
+						</figure>
+					</div>
+				{% else %}
+				  {% assign found = true %}
+				{% endif %}
+			{% endfor %}
+		{% endfor %}
 	</div>
-</div>
 
 <script src="../public/js/flip-card.js"></script>

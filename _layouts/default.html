@@ -7,47 +7,49 @@
 		{% include splash-page.html %}
 
 		<div class="wrapper" id="content">
+
+			<!-- NAVIGATION -->
 			{% if page.is_post %}
-			<div id="post-nav" class="wrapper--navbar fixed post">
-				{% for post in page.section %}
-				<div id="hoverdown" class="left"><i class="fa fa-bars fa-2x icon-light" aria-hidden="true"></i>
-				{% endfor %}
-					<div id="white-nav">
-						<div id="nav" class="post">
-							{% include navigation.html %}
-							<a href="http://google.ca" style="display: block"><img src="{{ site.url }}/{{ site.image_path }}/github-w.svg"></a>
-							<a href="#" style="display: block"><img src="{{ site.url }}/{{ site.image_path }}/linkedin-w.svg"></a>
-							<a href="#" style="display: block"><img src="{{ site.url }}/{{ site.image_path }}/resume-w.svg"></a>
-						</div>
-					</div>
+				<div id="post-nav" class="wrapper--navbar post">
+					{% include navigation-project.html %}
 				</div>
 			{% else %}
-			<div id="post-nav" class="wrapper--navbar fixed">
-				<div id="hoverdown"><i class="fa fa-bars fa-2x icon-dark" aria-hidden="true"></i>
-					<div id="nav">
-						{% include navigation.html %}
-					</div>
+				<div id="post-nav" class="wrapper--navbar fixed">
+					{% include navigation.html %}
 				</div>
-				<a href="http://google.ca" style="display: block"><img src="{{ site.url }}/{{ site.image_path }}/github.svg"></a>
-				<a href="#" style="display: block"><img src="{{ site.url }}/{{ site.image_path }}/linkedin.svg"></a>
-				<a href="#" style="display: block"><img src="{{ site.url }}/{{ site.image_path }}/resume.svg"></a>
-				<div class="nav-logo">
+				<div id="logo" class="nav-logo">
 					<a href="{{ site.url }}"><img id="tk-logo" src="{{ site.url }}/{{ site.image_path }}/tk-logo.svg"></a>
 				</div>
-				{% endif %}
-			</div>
+			{% endif %}
+
+			<!-- IF PROJECT, DISPLAY PROJECTS -->
 			{% if page.is_post %}
-			{% for item in page.section %}
-				<div class="wrapper--left-side fixed left-post" style="background:{{ item.color }}">
-					{% include project-assets.html %}
-				</div>
-			{% endfor %}
-				<div class="wrapper--right-side right-post">
-					<div class="maximum-width">
-						{{ content }}
-						{% include more-projects.html %}
+				<!-- DESIGN PROJECTS -->
+				{% if page.category contains "design" %}
+					<div class="wrapper--left-side fixed left-post" style="background:#fff">
+						{% include project-assets.html %}
 					</div>
-				</div>
+					<div class="wrapper--right-side right-post" style="background:#f9f9f9">
+						<div class="maximum-width">
+							{{ content }}
+							{% include more-projects.html %}
+						</div>
+					</div>
+				<!-- CODING PROJECTS -->
+				{% else %}
+					{% for item in page.section %}
+						<div class="wrapper--left-side fixed left-post" style="background:{{ item.color }}">
+							{% include project-assets.html %}
+						</div>
+					{% endfor %}
+					<div class="wrapper--right-side right-post">
+						<div class="maximum-width">
+							{{ content }}
+							{% include more-projects.html %}
+						</div>
+					</div>
+				{% endif %}
+			<!-- IF NOT PROJECT, DISPLAY REGULAR CONTENT -->
 			{% else %}
 				<div class="wrapper--left-side fixed">
 					{% include left-side.html %}
@@ -56,10 +58,11 @@
 				<div class="wrapper--right-side maximum-width">
 					<span id="code"></span>
 					<span id="design"></span>
-					{{ content }}
+						{{ content }}
 				</div>
 			{% endif %}
 
+			<!-- CATEGORY SIDEBAR -->
 			<div class="wrapper--category fixed">
 				{% include category.html %}
 			</div>

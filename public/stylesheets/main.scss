@@ -32,6 +32,10 @@
 @import "morph/demo.css";
 @import "morph/normalize.css";
 @import "morph/pater.css";
+// @import "cardhover/demo.css";
+// @import "cardhover/normalize.css";
+@import "cardhover/custom.css";
+@import "nav-animation";
 
 /* Layout specific */
 @import "default-layout";
@@ -75,7 +79,7 @@
 
 html {
     overflow: hidden;
-    background: #ecf0f1;
+    background: #fff;
 }
 
 body {
@@ -176,6 +180,6 @@ li {
 }
 
 .maximum-width {
-	max-width: 1224px;
+	max-width: 1424px;
 	margin: auto;
 }

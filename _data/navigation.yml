@@ -3,13 +3,13 @@
 - title: Projects
   url: /
 
-- title: Code
-  url: /#code
-  category: code
+# - title: Code
+#   url: /#code
+#   category: code
 
-- title: Design
-  url: /#design
-  category: design
+# - title: Design
+#   url: /#design
+#   category: design
   
 # - title: Projects
 #   url: /projects/

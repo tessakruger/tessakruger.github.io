@@ -33,6 +33,10 @@
 			background: #fff;
 			padding-top: 80px;
 		}
+
+		.btn-controls {
+			margin-bottom: 15px;
+		}
 	}
 
 	.wrapper--category {
@@ -44,7 +48,7 @@
 		height: 100vh;
 		padding-bottom: 20px;
 		min-width: 100px;
-		z-index: 0;
+		z-index: 1;
 
 		.title {
 			transform: rotate(-90deg);
@@ -110,6 +114,36 @@
 		}
 	}
 
+}
+
+// Second list of projects on project page
+.projects2 {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	// width: 100%;
+
+	.project-block {
+		width: calc(100% * 1/3 - 1px);
+		// width: 100%;
+		height: 100%;
+		position: relative;
+		min-width: 320px;
+		min-height: 320px;
+		max-width: 356px;
+		max-height: 356px;
+		flex: 1;
+		// margin-top: -1px;
+
+		h2 {
+			word-break: break-word;
+		}
+
+		.month {
+			text-transform: uppercase;
+			font-family: $museo-bold;
+		}
+	}
 }
 
 // contact page
