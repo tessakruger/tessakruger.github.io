@@ -2,7 +2,7 @@
 layout: page
 title: no flyers please
 sidebar: contact;
-permalink: /contact
+permalink: /contact/
 section:
   bio: I'm a freelance developer who loves to turn your visions into reality. Get in touch and let's create something great!
   img: /tessadrawing.svg

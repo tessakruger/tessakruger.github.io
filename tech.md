@@ -2,7 +2,7 @@
 layout: page
 title: now you're speaking my language
 sidebar: tech stack;
-permalink: /tech
+permalink: /tech/
 section:
   bio: I like to dabble between the disparate visual and technical languages. I love to problem solve, while making things look pretty. Just call me full stack.
   img: /tessadrawing.svg
