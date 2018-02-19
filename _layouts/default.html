@@ -26,8 +26,10 @@
 			{% if page.is_post %}
 				<!-- DESIGN PROJECTS -->
 				{% if page.category contains "design" %}
-					<div class="wrapper--left-side fixed left-post" style="background:#fff">
-						{% include project-assets.html %}
+					<div id="display-project-assets">
+						<div class="wrapper--left-side fixed left-post" style="background:#fff">
+							{% include project-assets.html %}
+						</div>
 					</div>
 					<div class="wrapper--right-side right-post" style="background:#f9f9f9">
 						<div class="maximum-width">
@@ -43,15 +45,6 @@
 								{% include project-assets.html %}
 							</div>
 						</div>
-
-						<script>
-							function calcVH() {
-							  let vH = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
-							  document.getElementById("display-project-assets").setAttribute("style", "height:" + vH + "px;");
-							}
-							calcVH();
-							window.addEventListener('onorientationchange', calcVH, true);
-						</script>
 					{% endfor %}
 					<div class="wrapper--right-side right-post">
 						<div class="maximum-width">
@@ -60,6 +53,15 @@
 						</div>
 					</div>
 				{% endif %}
+
+				<script>
+					function calcVH() {
+					  let vH = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+					  document.getElementById("display-project-assets").setAttribute("style", "height:" + vH + "px;");
+					}
+					calcVH();
+					window.addEventListener('onorientationchange', calcVH, true);
+				</script>
 			<!-- IF NOT PROJECT, DISPLAY REGULAR CONTENT -->
 			{% else %}
 				<div class="wrapper--left-side fixed">
