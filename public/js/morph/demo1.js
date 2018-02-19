@@ -36,6 +36,7 @@
 
 	let loaded;
 	const navigate = () => {
+		console.log('clicked');
 		$('#content').animate({'opacity': '1'}, 400);
 		if ( loaded ) return;
 		loaded = true;

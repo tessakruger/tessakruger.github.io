@@ -177,8 +177,8 @@ figure.effect-julia:hover p {
 /* Media queries */
 @media screen and (max-width: 50em) {
 	.content {
-		padding: 0 10px;
-		text-align: center;
+		padding: 0;
+		/*text-align: center;*/
 	}
 	.grid figure {
 		display: inline-block;

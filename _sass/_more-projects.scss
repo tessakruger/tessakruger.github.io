@@ -1,47 +1,21 @@
-.project-card { //cardWrapper
-  width: 130px;
-  height: 130px;
-  position:relative;
-  float:left;
-  margin:5px;
-  cursor:pointer;
-  -webkit-font-smoothing:antialiased;
+.more-projects {
+  margin-top: 100px;
 
-    .front, .back { //cardFace
-      position: absolute;
-      width: 130px;
-      height: 130px;
-      overflow:hidden;
-      padding: 10px;
-      border-radius: 6px;
+  .project-list {
 
-      h3 {
-        	font-size: 1.2em;
-        	word-wrap: break-word;
-        	color: #fff;
-        }
+    .project-block {
+      flex-basis: 25%;
+      min-width: 150px;
+      min-height: 150px;
 
-      i {
-      	position: absolute;
-      	bottom: 12px;
-      	right: 12px;
+      h2 {
+        font-size: 130%;
+      }
+      
+      figcaption {
+        padding: 1em;
+        font-size: 1em;
       }
     }
-
-    .back {
-      text-align: center;
-      display: flex;
-      justify-content: center;
-
-      img {
-        max-width: 80%;
-        margin: auto;
-    }
   }
-}
-
-.more-projects,
-.navigate {
-	margin-top: 100px;
-	clear: right;
 }

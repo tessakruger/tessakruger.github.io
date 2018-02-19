@@ -9,12 +9,12 @@ section:
 ---
 <div class="content content--fixed">
 	<div class="content__inner">
-		<div class="controls btn-controls">
-			<button type="button" class="control" data-filter=".code">Code</button>
-			<button type="button" class="control" data-filter=".design">Design</button>
-			<button type="button" class="control" data-filter="all">All</button>
+		<div class="box bg-1">
+			<button type="button" class="control button button--quidel button--round-s" data-filter=".code"><span>Code</span></button>
+			<button type="button" class="control button button--quidel button--round-s" data-filter=".design"><span>Design</span></button>
+			<button type="button" class="control button button--quidel button--round-s" data-filter="all"><span>All</span></button>
 		</div>
-		<div class="container projects2">
+		<div class="container project-list">
 			{% for post in site.posts %}
 			{% for item in post.section%}
 			<div class="mix {{ post.category }} project-block grid">
@@ -27,7 +27,7 @@ section:
 							<p>{{ item.tech }}</p>
 						</div>
 						<a href="{{ post.url }}">View more</a>
-					</figcaption>			
+					</figcaption>
 				</figure>
 			</div>
 			{% endfor %}

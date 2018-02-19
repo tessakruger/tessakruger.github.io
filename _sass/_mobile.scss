@@ -36,6 +36,7 @@
 			right: 0;
 			top: 0%;
 			z-index: 2;
+			left: unset;
 
 			a {
 				display: block;
@@ -53,12 +54,6 @@
 				margin: auto;
 	    	width: auto;
 	    	height: 30px;
-	    	opacity: 0.5;
-	    	transition: all 250ms ease-in-out;
-
-	    	img:hover {
-	    		opacity: 0.8;
-	    	}
 			}
 
 		}
@@ -98,12 +93,13 @@
 			width: 100%;
 		    margin: 0;
 		    padding: 0;
-		    padding-top: 75px;
+		    // padding-top: 75px;
 		    position: relative;
 
 		    .main-intro {
 		    	display: flex;
 		    	padding: 15px;
+		    	margin-top: 60px;
 
 		    	.intro-text {
 		    		flex: 1;
@@ -218,12 +214,49 @@
 				flex-direction: column;
 				word-break: break-word;
 			}
+		}
+
+		.box {
+			margin-left: 0px;
+			margin-bottom: 20px;
 
 			button {
-				margin: 4px 2px;
+				margin: 2px;
 			}
 		}
 	}
+
+	// #menu {
+	// 	width: 100vw;
+	// }
+
+	// HOME PAGE - PROJECTS LIST
+	.project-list {
+		margin: auto -15px;
+	}
+	//#####################//
+
+	// MORE PROJECTS
+	.more-projects {
+	  .project-list {
+	    .project-block {
+	      flex-basis: 50%;
+	    }
+	  }
+	}
+	//####################//
+
+	// TECH PAGE
+	.charts-container {
+	  .tech {
+	    flex-basis: 50%;
+	  }
+	}
+
+	.pie-wrapper {
+		margin: 15px 5px;
+	}
+	//#####################//
 }
 
 @media screen and (max-height: 600px) {
