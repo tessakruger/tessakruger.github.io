@@ -43,6 +43,15 @@
 								{% include project-assets.html %}
 							</div>
 						</div>
+
+						<script>
+							function calcVH() {
+							  let vH = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+							  document.getElementById("display-project-assets").setAttribute("style", "height:" + vH + "px;");
+							}
+							calcVH();
+							window.addEventListener('onorientationchange', calcVH, true);
+						</script>
 					{% endfor %}
 					<div class="wrapper--right-side right-post">
 						<div class="maximum-width">
@@ -75,14 +84,6 @@
 		<script src="../public/js/morph/charming.min.js"></script>
 		<script src="../public/js/morph/anime.min.js"></script>
 		<script src="../public/js/morph/demo1.js"></script>
-		<script>
-			function calcVH() {
-			  let vH = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
-			  document.getElementById("display-project-assets").setAttribute("style", "height:" + vH + "px;");
-			}
-			calcVH();
-			window.addEventListener('onorientationchange', calcVH, true);
-		</script>
 
 	</body>
 </html>

@@ -223,6 +223,30 @@
 				margin: 2px;
 			}
 		}
+
+		.wrapper--navbar {
+			a img {
+				height: 25px;
+			}
+
+			div.social-container {
+				top: -48px;
+
+				img {
+					padding: 0 7px;
+				}
+			}
+		}
+	}
+
+	.slider-container .slider-wrap .slider-nav a {
+		width: 8px;
+		height: 8px;
+		margin: 2px;
+	}
+
+	div.slide-previous, div.slide-next {
+		margin-bottom: -115%;
 	}
 
 	// #menu {

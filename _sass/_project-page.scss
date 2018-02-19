@@ -43,7 +43,8 @@
 	      .slide {
 	        float: left;
 	        width: 500px;
-	        height: 70vh;
+	        height: -webkit-fill-available;
+	        margin-top: -50px;
 	        position: relative;
 	        background-position: center center;
 	        background-size: contain;
@@ -120,7 +121,7 @@ div.slide-next {
 	top: 0;
 	bottom: 0;
 	background: none;
-	opacity: 0.2;
+	opacity: 0.1;
 	padding: 28px;
 	margin: auto;
 	transition: background 250ms ease-in-out;
