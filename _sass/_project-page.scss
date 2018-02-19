@@ -1,7 +1,6 @@
 .slider-container {
 	position: relative;
 	width: 100%;
-	padding: 0 25px;
 
 	.slider-wrap {
 	  width: 100%;
@@ -121,7 +120,7 @@ div.slide-next {
 	top: 0;
 	bottom: 0;
 	background: none;
-	opacity: 0.3;
+	opacity: 0.2;
 	padding: 28px;
 	margin: auto;
 	transition: background 250ms ease-in-out;
@@ -133,7 +132,7 @@ div.slide-next {
 
 div.slide-previous:hover,
 div.slide-next:hover {
-	background: #333;
+	background: rgba(51,51,51,0.3);
 
 	i {
 		color: #000;

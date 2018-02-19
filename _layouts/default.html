@@ -38,8 +38,10 @@
 				<!-- CODING PROJECTS -->
 				{% else %}
 					{% for item in page.section %}
-						<div class="wrapper--left-side fixed left-post" style="background:{{ item.color }}">
-							{% include project-assets.html %}
+						<div id="display-project-assets">
+							<div class="wrapper--left-side fixed left-post" style="background:{{ item.color }}">
+								{% include project-assets.html %}
+							</div>
 						</div>
 					{% endfor %}
 					<div class="wrapper--right-side right-post">
@@ -73,6 +75,14 @@
 		<script src="../public/js/morph/charming.min.js"></script>
 		<script src="../public/js/morph/anime.min.js"></script>
 		<script src="../public/js/morph/demo1.js"></script>
+		<script>
+			function calcVH() {
+			  let vH = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+			  document.getElementById("display-project-assets").setAttribute("style", "height:" + vH + "px;");
+			}
+			calcVH();
+			window.addEventListener('onorientationchange', calcVH, true);
+		</script>
 
 	</body>
 </html>
