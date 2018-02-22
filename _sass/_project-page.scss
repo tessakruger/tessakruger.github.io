@@ -43,8 +43,8 @@
 	      .slide {
 	        float: left;
 	        width: 500px;
-	        height: -webkit-fill-available;
-	        margin-top: -50px;
+	        height: 70vh;
+	        margin-top: 0;
 	        position: relative;
 	        background-position: center center;
 	        background-size: contain;
@@ -133,7 +133,7 @@ div.slide-next {
 
 div.slide-previous:hover,
 div.slide-next:hover {
-	background: rgba(51,51,51,0.3);
+	background: rgba(51,51,51,0.5);
 
 	i {
 		color: #000;

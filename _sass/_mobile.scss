@@ -1,4 +1,4 @@
-@media screen and (max-width: 1060px), screen and (max-height: 900px) {
+@media screen and (max-width: 1190px), screen and (max-height: 900px) {
 	html {
 		overflow: -webkit-paged-y;
 	}
@@ -189,6 +189,16 @@
 			display: none;
 		}
 	}
+
+	.project-list {
+		.project-block {
+			flex-basis: 50%;
+
+			h2 {
+				font-size: 4vw;
+			}
+		}
+	}
 }
 
 @media screen and (max-width: 580px) {
@@ -197,7 +207,7 @@
 		.wrapper--left-side {
 
 		    .main-intro {
-		    	flex-wrap: wrap;
+		    	display: none;
 
 		    	.intro-text {
 		    		width: 100%;
@@ -240,7 +250,7 @@
 	}
 
 	#menu {
-		width: 100vw;
+		width: 102vw;
 	}
 
 	.slider-container .slider-wrap .slider-nav a {
@@ -250,18 +260,27 @@
 	}
 
 	div.slide-previous, div.slide-next {
-		margin-bottom: -115%;
+		margin: -130% -5px 0 -5px;
 	}
 
-	// #menu {
-	// 	width: 100vw;
-	// }
+	h1.post-title {
+		margin-top: 70px;
+	}
+
+	// CONTACT PAGE
+	.contact--wrapper {
+		flex-direction: column;
+
+		.contact--info {
+			width: auto;
+			align-self: stretch;
+		}
+	}
 
 	// HOME PAGE - PROJECTS LIST
 	.project-list {
 		margin: auto -15px;
 	}
-	//#####################//
 
 	// MORE PROJECTS
 	.more-projects {
@@ -271,7 +290,6 @@
 	    }
 	  }
 	}
-	//####################//
 
 	// TECH PAGE
 	.charts-container {
@@ -283,7 +301,6 @@
 	.pie-wrapper {
 		margin: 15px 5px;
 	}
-	//#####################//
 }
 
 @media screen and (max-height: 600px) {
