@@ -3,6 +3,7 @@ $(document).ready (function(){
 	const allSlides = document.getElementsByClassName('slider-wrap');
 	const allNavButtons = $(".slider-nav > a");
 	$(allNavButtons[0]).addClass("active");
+	let outsideCarousel;
 
 	for(let i=0; i<allSlides.length; i++) {
 		let carousel = { container: allSlides[i] };
@@ -21,6 +22,16 @@ $(document).ready (function(){
 				carouselNext(carousel); });
 
 		})(carousel);
+		outsideCarousel = carousel
+	}
+
+	function myfunction(el,d) {
+	  if (d === "r") {
+	  	carouselPrev(outsideCarousel)
+	  }
+	  if (d === "l") {
+	  	carouselNext(outsideCarousel)
+	  }
 	}
 
 	function carouselNext(carousel) {
@@ -62,8 +73,8 @@ $(document).ready (function(){
   function detectswipe(el,func) {
     swipe_det = new Object();
     swipe_det.sX = 0; swipe_det.sY = 0; swipe_det.eX = 0; swipe_det.eY = 0;
-    var min_x = 30;  //min x swipe for horizontal swipe
-    var max_x = 30;  //max x difference for vertical swipe
+    var min_x = 10;  //min x swipe for horizontal swipe
+    var max_x = 10;  //max x difference for vertical swipe
     var min_y = 50;  //min y swipe for vertical swipe
     var max_y = 60;  //max y difference for horizontal swipe
     var direc = "";
@@ -85,11 +96,6 @@ $(document).ready (function(){
         if(swipe_det.eX > swipe_det.sX) direc = "r";
         else direc = "l";
       }
-      //vertical detection
-      else if ((((swipe_det.eY - min_y > swipe_det.sY) || (swipe_det.eY + min_y < swipe_det.sY)) && ((swipe_det.eX < swipe_det.sX + max_x) && (swipe_det.sX > swipe_det.eX - max_x) && (swipe_det.eY > 0)))) {
-        if(swipe_det.eY > swipe_det.sY) direc = "d";
-        else direc = "u";
-      }
 
       if (direc != "") {
         if(typeof func == 'function') func(el,direc);
@@ -97,10 +103,6 @@ $(document).ready (function(){
       direc = "";
       swipe_det.sX = 0; swipe_det.sY = 0; swipe_det.eX = 0; swipe_det.eY = 0;
     },false);  
-  }
-
-  function myfunction(el,d) {
-    alert("you swiped on element with id '"+el+"' to "+d+" direction");
   }
 
   detectswipe('slider',myfunction);
