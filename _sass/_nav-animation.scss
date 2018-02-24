@@ -3,9 +3,7 @@
   position: relative;
   top: 10px;
   left: 24px;
-  
   z-index: 999999;
-  
   -webkit-user-select: none;
   user-select: none;
 
@@ -22,12 +20,9 @@
     position: absolute;
     top: -4px;
     left: -9px;
-    
     cursor: pointer;
-    
     opacity: 0; /* hide this */
     z-index: 999999; /* and place it over the hamburger */
-    
     -webkit-touch-callout: none;
 
     &:checked ~ span {
@@ -56,15 +51,11 @@
     height: 4px;
     margin-bottom: 5px;
     position: relative;
-    
     background: $dark-gray;
     opacity: 0.3;
     border-radius: 3px;
-    
     z-index: 1;
-    
     transform-origin: 4px 0px;
-    
     transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
                 background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
                 opacity 0.55s ease;
@@ -86,22 +77,22 @@
   margin: 13px 0 0 -30px;
   padding: 40px 0;
   min-height: 330px;
-  background: $slate-blue;
+  background: rgba(27, 43, 52, 1);
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   transform-origin: 0% 0%;
   transform: translate(-100%, 0);
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);;
 
   li {
     padding: 20px 40px;
     text-align: left;
-    color: rgba(255,255,255,0.7);
-    background: $slate-blue;
+    color: $white;
+    background: none;
     transition: all 300ms ease-in-out;
 
     &:hover {
-      background: rgba(212,221,226,0.2);
+      background: rgba(23, 35, 41, 0.3);
       color: $white;
     }
   }
