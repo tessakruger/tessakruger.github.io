@@ -7,20 +7,16 @@ section:
   bio: I'm a freelance developer who loves to turn your visions into reality. Get in touch and let's create something great!
   img: /tessadrawing.svg
 contact:
- - text: let's roll
-   icon: fa-lightbulb-o
-   text-link: kick start your project
-   link: #
  - text: send me some electronic mail
-   icon: fa-envelope-o
+   icon: ion-ios-paperplane-outline
    text-link: <span class="line">hello</span><span class="line">@tessakruger.com</span>
    link: #
  - text: how about that sms
-   icon: fa-phone
+   icon: ion-ios-telephone-outline
    text-link: 647 376 5462
    link: sms:6473765462
  - text: you like coffee?
-   icon: fa-map-marker
+   icon: ion-ios-location-outline
    text-link: toronto, canada
    link: https://goo.gl/maps/vQgBwMjWjLC2
 ---
@@ -30,7 +26,7 @@ contact:
 	<div class="contact--info" id="contact--hover">
 		<a href="{{ prop.link }}" style="display: block">
 			<div class="contact--icon">
-				<i class="fa {{ prop.icon }} fa-3x" aria-hidden="true"></i>
+				<i class="ios {{ prop.icon }} fa-3x" aria-hidden="true"></i>
 			</div>
 			<div>
 				<h4>{{ prop.text }}</h4>

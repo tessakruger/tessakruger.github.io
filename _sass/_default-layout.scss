@@ -1,4 +1,7 @@
-#content { opacity: 0 }
+#content {
+	opacity: 0;
+	position: relative;
+}
 
 .wrapper {
 	@include flexbox();
@@ -33,6 +36,7 @@
 			margin: 0 0 auto 60%;
 			background: #fff;
 			padding-top: 80px;
+			position: relative;
 		}
 
 		.btn-controls {
@@ -41,10 +45,15 @@
 	}
 
 	.footer--container {
-		height: 50px;
-		margin-top: 150px;
+		display: none;
+		height: 80px;
 		width: 100%;
-		background: lightcoral;
+		position: absolute;
+		bottom: 0;
+		right: 0px;
+		left: 0;
+		z-index: 1;
+		cursor: pointer;
 	}
 
 	.wrapper--category {
@@ -231,5 +240,56 @@ figure.effect-julia p {
 		span.line {
 			display: inline-block;
 		}
+	}
+}
+
+//icons
+.icon {
+	&.large {
+		transform: perspective(1px) translateZ(0);
+		&:before {
+			font-size: 3em;
+			position: absolute;
+			padding: 10px;
+			margin-left: -10px;
+		}
+		&:hover {
+			-webkit-animation-name: hvr-wobble-vertical;
+	    animation-name: hvr-wobble-vertical;
+	    -webkit-animation-duration: 1s;
+	    animation-duration: 1s;
+	    -webkit-animation-timing-function: ease-in-out;
+	    animation-timing-function: ease-in-out;
+	    -webkit-animation-iteration-count: 1;
+	    animation-iteration-count: 1;
+		}
+		@keyframes hvr-wobble-vertical {
+			16.65% {
+			    -webkit-transform: translateY(8px);
+			    transform: translateY(8px);
+			}
+
+			33.3% {
+			    -webkit-transform: translateY(-6px);
+			    transform: translateY(-6px);
+			}
+			49.95% {
+			    -webkit-transform: translateY(4px);
+			    transform: translateY(4px);
+			}
+			66.6% {
+			    -webkit-transform: translateY(-2px);
+			    transform: translateY(-2px);
+			}
+			83.25% {
+			    -webkit-transform: translateY(1px);
+			    transform: translateY(1px);
+			}
+			100% {
+			    -webkit-transform: translateY(0);
+			    transform: translateY(0);
+			}
+		}
+
 	}
 }

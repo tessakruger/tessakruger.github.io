@@ -85,14 +85,12 @@
   width: 300px;
   margin: 13px 0 0 -30px;
   padding: 40px 0;
-  
+  min-height: 330px;
   background: $slate-blue;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
-
   transform-origin: 0% 0%;
   transform: translate(-100%, 0);
-  
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 
   li {
@@ -124,10 +122,15 @@
     a {
       opacity: 0.7;
       transition: opacity 250ms ease-in-out;
+
+      &:hover {
+        opacity: 1;
+      }
     }
 
-    a:hover {
-      opacity: 1;
+    i {
+      font-size: 25pt;
+      color: #fff;
     }
 
     img {

@@ -1,4 +1,4 @@
-@media screen and (max-width: 1190px), screen and (max-height: 900px) {
+@media screen and (max-width: 1050px), screen and (max-height: 800px) {
 	html {
 		overflow: -webkit-paged-y;
 	}
@@ -102,6 +102,7 @@
 		    	display: flex;
 		    	padding: 15px;
 		    	margin-top: 60px;
+		    	height: 330px;
 
 		    	.intro-text {
 		    		flex: 1;
@@ -201,6 +202,10 @@
 			}
 		}
 	}
+
+	.wrapper .footer--container {
+		display: block;
+	}
 }
 
 @media screen and (max-width: 580px) {
@@ -219,7 +224,7 @@
 		}
 
 		.wrapper--right-side {
-			padding: 15px;
+			padding: 15px 15px 150px;
 
 			.project-item {
 				flex-direction: column;
@@ -255,14 +260,22 @@
 		width: 102vw;
 	}
 
-	.slider-container .slider-wrap .slider-nav a {
-		width: 8px;
-		height: 8px;
-		margin: 2px;
+	.slider-container {
+		width: calc(100% - 4px);
+		.slider-wrap {
+			.slide {
+				margin-left: 2px;
+			}
+			.slider-nav a {
+				width: 8px;
+				height: 8px;
+				margin: 2px;
+			}
+		}
 	}
 
 	div.slide-previous, div.slide-next {
-		margin: 0 -5px;
+		margin: 0;
 	}
 
 	h1.post-title {

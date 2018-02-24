@@ -1,3 +1,7 @@
 <div class="footer--container">
-  <p>back</p>
+  {% if page.is_post %}
+  <a href="{{ site.url }}"><i class="icon ion-ios-home-outline large"></i></a>
+  {% else %}
+  <a href="#"><i class="icon ion-ios-arrow-up large"></i></a>
+  {% endif %}
 </div>
