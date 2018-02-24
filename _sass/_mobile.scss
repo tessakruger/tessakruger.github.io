@@ -276,10 +276,16 @@
 
 	div.slide-previous, div.slide-next {
 		margin: 0;
+		width: 90px;
+
+		i {
+			display: none;
+		}
 	}
 
 	h1.post-title {
 		margin-top: 70px;
+		font-size: 2em;
 	}
 
 	// CONTACT PAGE
