@@ -51,10 +51,20 @@
     right: 0.4em;
     text-align: center;
     top: 0.4em;
-    font-family: $museo-bold;
+    font-family: $museo;
+    font-weight: bold;
 
     img {
       width: 50%;
+
+      &.larger {
+        width: 80%;
+        margin-top: 10px;
+      }
+
+      &.gray {
+        filter: grayscale(100%)
+      }
     }
   }
 
@@ -68,8 +78,8 @@
 
     .right-side,
     .left-side {
-      -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+      -webkit-transform: rotate(181deg);
+          transform: rotate(181deg);
     }
 
     .half-circle {
@@ -122,6 +132,10 @@
     .node {
       border-color: #9db655;
     }
+
+    .vue {
+      border-color: #42b883;
+    }
   }
 
   .shadow {
@@ -145,4 +159,9 @@
 #progress-75 .left-side {
   -webkit-transform: rotate(270deg);
           transform: rotate(270deg);
+}
+
+#progress-80 .left-side {
+  -webkit-transform: rotate(295deg);
+          transform: rotate(295deg);
 }

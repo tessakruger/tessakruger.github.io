@@ -63,10 +63,10 @@ audio:not([controls]) {
 }
 
 a { 
-  font-family: $museo-bold;
+  font-family: $museo;
+  font-weight: bold;
   color: $dark-blue;
-  text-decoration: none;
-  font-weight: 900;
+  text-decoration: none;;
   text-transform: uppercase;
   margin: 5px 0;
   transition: all 250ms ease-in-out;

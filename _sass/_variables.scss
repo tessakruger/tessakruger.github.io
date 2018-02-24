@@ -20,18 +20,16 @@ $monospace                    : Monaco, Consolas, "Lucida Console", monospace !d
 /* sans serif typefaces */
 $sans-serif-narrow            : $sans-serif !default;
 $helvetica                    : Helvetica, "Helvetica Neue", Arial, sans-serif !default;
-$museo                        : "Museo Sans", Arial, sans-serif;
-$museo-bold                   : "Museo Sans Bold", Arial, sans-serif;
-$museo-xbold                  : "Museo Sans Extra-bold", Arial, sans-serif;
+$museo                        : "Museo Sans", Arial, sans-serif;;
 $anonymous                    : "Anonymouse Pro", Monaco, Consolas, "Lucida Console", monospace !default;
 $pluto                        : "Pluto Sans", Arial, sans-serif;
-$pluto-bold                   : "Pluto Sans Bold", Arial, sans-serif;
 $ubuntu                       : Ubuntu, Monaco, Consolas, "Lucida Console", monospace !default;
 $open-sans                    : "Open Sans", Arial, sans-serif;
 $raleway                      : Raleway, Arial, sans-serif;
+$galano                       : Galano, Arial, sans-serif;
 
 /* handwriting typefaces */
-$king						  : "King Basil", serif;
+$king						              : "King Basil", serif;
 
 /* type scale */
 $type-size-1                  : 2.441em !default;  // ~39.056px
@@ -55,7 +53,7 @@ $light-gray                   : mix(#fff, $gray, 50%) !default;
 $lighter-gray                 : mix(#fff, $gray, 90%) !default;
 $yellow                       : #f8c000;
 $dark-blue                    : #1b2b34;
-$light-blue                   : #d4dde2;
+$light-blue                   : #dee0e1;
 $slate-blue					          : #607D8B;
 $pink                         : #f9d3e0;
 $white                        : #fff;

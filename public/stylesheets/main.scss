@@ -54,28 +54,24 @@
 }
 
 @font-face {
-	font-family: "Museo Sans Bold";
-	src: url('../fonts/MuseoSansCyrl_500.otf') format('opentype');
-}
-
-@font-face {
-	font-family: "Museo Sans Extra-Bold";
-	src: url('../fonts/MuseoSansCyrl_900.otf') format('opentype');
-}
-
-@font-face {
 	font-family: "Pluto Sans";
 	src: url('../fonts/pluto-sans.ttf');
 }
 
 @font-face {
-	font-family: "Pluto Sans Bold";
+	font-family: "Pluto Sans";
 	src: url('../fonts/pluto-sans-bold.ttf');
+	font-weight: bold;
 }
 
 @font-face {
 	font-family: "King Basil";
 	src: url('../fonts/King-Basil-Lite.ttf');
+}
+
+@font-face {
+	font-family: "Galano";
+	src: url('../fonts/galano-bold.woff') format('woff');
 }
 
 html {
@@ -94,14 +90,13 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: $raleway;
+	font-family: $galano;
+	letter-spacing: 1.5px;
 }
 
 h1 {
 	font-size: $type-size-1;
 	text-transform: uppercase;
-	letter-spacing: -0.75px;
-	font-weight: 700;
 }
 
 h2 {
@@ -113,21 +108,40 @@ h3 {
 	font-size: $type-size-3;
 }
 
+.post-content h3 {
+	font-size: 1.25em;
+	font-family: $museo;
+	text-transform: uppercase;
+	margin-bottom: 5px;
+}
+
+.more-projects {
+	p {
+		margin: 0 auto 30px auto;
+	}
+
+	h3 {
+		text-transform: uppercase;
+		margin-bottom: 5px;
+	}
+}
+
 h4 {
 	font-size: $type-size-4;
 	text-transform: uppercase;
 }
 
 h5 {
-	font-family: $museo-bold;
+	font-family: $galano;
 	font-size: 14px;
 	color: $yellow;
 	text-transform: uppercase;
-	letter-spacing: -0.5px;
+	letter-spacing: 0.5px;
 }
 
 h6 {
-	font-family: $museo-bold;
+	font-family: $museo;
+	font-weight: bold;
 }
 
 p {
@@ -187,7 +201,7 @@ p {
 }
 
 .button--quidel {
-	background: rgba(212, 221, 226, 0.2);
+	background: rgba(212, 221, 226, 0.5);
 	color: $slate-blue;
 	overflow: hidden;
 	-webkit-transition: color 0.3s;

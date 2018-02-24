@@ -15,6 +15,12 @@ stack:
    name: nodejs
    image: /projects/tech/node.svg
    knowledge: 75
+ - tech: vue
+   name: vue
+   image: /projects/tech/vue.svg
+   knowledge: 80
+   resize: larger
+   colorless: gray
  - tech: react
    name: react
    image: /projects/tech/react.svg
@@ -48,12 +54,13 @@ stack:
    image: /projects/tech/photoshop.svg
    knowledge: 90
 ---
+<p>These are a few tools of my trade. I'm frontend-focused, but also enjoy working with databases and take an odd liking to SQL queries. My recent work has been in Javascript using Vue and Node, and I take pride in writing scalable, and easily maintainable code.</p>
 <div class="set-size charts-container">
 	{% for prop in page.stack %}
 	<div class="tech">
 	  <div class="pie-wrapper" id="progress-{{ prop.knowledge}}">
 	    <span class="label">
-	    	<img src="{{ site.url }}/public/images{{ prop.image }}">
+	    	<img class="{{ prop.resize }} {{ prop.colorless }}" src="{{ site.url }}/public/images{{ prop.image }}">
 	    </span>
 	    <div class="pie">
 	      <div class="left-side half-circle {{ prop.tech }}"></div>
