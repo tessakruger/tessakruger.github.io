@@ -30,7 +30,7 @@
 	display: block;
 	min-height: 100%;
 	max-width: 100%;
-	opacity: 0.7;
+	opacity: 0.8;
 	width: 500px;
 	max-height: 500px;
 }
@@ -94,7 +94,8 @@
 /*---------------*/
 
 figure.effect-julia {
-	background: #2f3238;
+	/*background: #2f3238;*/
+	background: #fff;
 }
 
 figure.effect-julia img {
@@ -163,7 +164,7 @@ figure.effect-julia:hover p:nth-of-type(3) {
 }
 
 figure.effect-julia:hover img {
-	opacity: 0.3;
+	opacity: 0.6;
 	-webkit-transform: scale3d(1.1,1.1,1);
 	transform: scale3d(1.1,1.1,1);
 }
