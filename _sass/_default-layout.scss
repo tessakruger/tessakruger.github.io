@@ -146,8 +146,8 @@
 		width: 100%;
 		height: fit-content;
 		position: relative;
-		flex-basis: 33.333%;
-		margin: 0;
+		flex-basis: 33%;
+		margin: -1px 0;
 
 		figure {
 			max-width: unset;
@@ -175,6 +175,10 @@
 			word-break: break-word;
 			font-size: 200%;
 			font-size: 2vw;
+
+			span.line {
+				display: inline-block;
+			}
 		}
 
 		.month {

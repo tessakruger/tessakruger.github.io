@@ -1,0 +1,46 @@
+---
+layout: post
+title: Sureclick
+title-safe:  Sure<span class="line">click</span>
+month: December - January 2018
+category: code
+img_ext: /projects/sureclick/mockup.png
+icon: /projects/icons/pm.svg
+sidebar: code;
+permalink: /projects/sureclick
+section:
+ - client: Invivo Communications
+   tech: VueJS, Node, Javascript, Webpack, Greensock, ZingTouch
+   link: #
+   color: "#002446"
+   dark: "#71043f"
+   desc: A risk management app for the Sureclick device
+   width: 700%
+images-array:
+ - image: /projects/sureclick/01.png
+   alt: Activity landing page
+   id: 0
+ - image: /projects/sureclick/02.png
+   alt: Activity 1, remove the cap
+   id: 1
+ - image: /projects/sureclick/03.png
+   alt: Activity 3, spin the pen
+   id: 2
+ - image: /projects/sureclick/04.png
+   alt: Activity 3, rotate the pen
+   id: 3
+ - image: /projects/sureclick/05.png
+   alt: Activity 4, swipe the pen upwards
+   id: 4
+ - image: /projects/sureclick/06.png
+   alt: Score page - perfect score with confetti
+   id: 5
+---
+<h5 class="post-date">{{ page.month }}</h5>
+{% for title in site.defaults %}
+  <h3>{{ title.about }}</h3>
+  This is some info about the Sureclick.
+  <h3>{{ title.role }}</h3>
+  And some more information.
+{% endfor %}
+
